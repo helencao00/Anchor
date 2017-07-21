@@ -16,7 +16,6 @@
 		0D8113BB1F215124008E01A9 /* AnchorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8113BA1F215124008E01A9 /* AnchorUITests.swift */; };
 		0D8113CC1F215CDC008E01A9 /* ScannerCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */; };
 		0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8113CF1F22748E008E01A9 /* SafariViewController.swift */; };
-		0D8113D21F2278D0008E01A9 /* LinkWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8113D11F2278D0008E01A9 /* LinkWebView.swift */; };
 		1172C777246CC71A18EFE5E9 /* Pods_AnchorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59B9A0428265CD3C3FE571 /* Pods_AnchorTests.framework */; };
 		1A7F9C91C882BE1E2E152CEB /* Pods_Anchor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8989ABD392BD56A9F5C4FEB1 /* Pods_Anchor.framework */; };
 		5D5E950373C627DC356F4DC3 /* Pods_AnchorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFA53D190D4E49FD0900635 /* Pods_AnchorUITests.framework */; };
@@ -55,7 +54,6 @@
 		0D8113BC1F215124008E01A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerCamera.swift; path = ViewControllers/ScannerCamera.swift; sourceTree = "<group>"; };
 		0D8113CF1F22748E008E01A9 /* SafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SafariViewController.swift; path = ViewControllers/SafariViewController.swift; sourceTree = "<group>"; };
-		0D8113D11F2278D0008E01A9 /* LinkWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinkWebView.swift; path = ViewControllers/LinkWebView.swift; sourceTree = "<group>"; };
 		20C7D3EB921B519DA278821B /* Pods-AnchorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorUITests/Pods-AnchorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3154B53D8B399964B775642B /* Pods-Anchor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anchor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anchor/Pods-Anchor.release.xcconfig"; sourceTree = "<group>"; };
 		5FFA53D190D4E49FD0900635 /* Pods_AnchorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnchorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				0D81139C1F215124008E01A9 /* ViewController.swift */,
-				0D8113D11F2278D0008E01A9 /* LinkWebView.swift */,
 				0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */,
 				0D8113CF1F22748E008E01A9 /* SafariViewController.swift */,
 			);
@@ -477,7 +474,6 @@
 				0D8113CC1F215CDC008E01A9 /* ScannerCamera.swift in Sources */,
 				0D81139D1F215124008E01A9 /* ViewController.swift in Sources */,
 				0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */,
-				0D8113D21F2278D0008E01A9 /* LinkWebView.swift in Sources */,
 				0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,10 +35,14 @@ class ScannerCamera: UIViewController {
                                 let stringValue = code.stringValue!
                                 print("Found code: \(stringValue)")
                                 ScannerCamera.urll = URL(string: stringValue)
+                                if ScannerCamera.urll != nil{
                                 if UIApplication.shared.canOpenURL(ScannerCamera.urll!){
                                    self.performSegue(withIdentifier: "toWeb", sender: self)
                                 }
-                                
+                                }else{
+                                    print("frick")
+                                }
+
                             }
                         }
                     })

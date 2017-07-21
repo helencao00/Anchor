@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenuController" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="948" y="-422"/>
         </scene>
-        <!--Safari View Controller-->
+        <!--safariController-->
         <scene sceneID="VRJ-pr-NDc">
             <objects>
-                <viewController id="X18-1g-9I5" customClass="SafariViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="safariController" title="safariController" id="X18-1g-9I5" customClass="SafariViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gv7-Nj-GQz"/>
                         <viewControllerLayoutGuide type="bottom" id="ERO-z0-SSx"/>
@@ -112,22 +112,10 @@
                     <view key="view" contentMode="scaleToFill" id="7i6-Nr-hh3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB2-eS-5K1" customClass="LinkWebView" customModule="Anchor" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="FB2-eS-5K1" secondAttribute="trailing" id="1Go-ae-TiL"/>
-                            <constraint firstItem="FB2-eS-5K1" firstAttribute="leading" secondItem="7i6-Nr-hh3" secondAttribute="leading" id="1w6-Ea-9zh"/>
-                            <constraint firstItem="ERO-z0-SSx" firstAttribute="top" secondItem="FB2-eS-5K1" secondAttribute="bottom" id="d2e-eW-yMX"/>
-                            <constraint firstItem="FB2-eS-5K1" firstAttribute="top" secondItem="Gv7-Nj-GQz" secondAttribute="bottom" id="fSd-oC-xIU"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="FB2-eS-5K1" id="L2s-p5-2TZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMain" id="g9z-QK-3L3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15W-0S-R3M" userLabel="First Responder" sceneMemberID="firstResponder"/>

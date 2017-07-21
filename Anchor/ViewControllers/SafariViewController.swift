@@ -10,15 +10,17 @@ import UIKit
 import SafariServices
 
 class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
-
-    @IBOutlet weak var webView: UIWebView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         let safariVC = SFSafariViewController(url: ScannerCamera.urll!)
         self.present(safariVC, animated: true, completion: nil)
-
-        // Do any additional setup after loading the view.
+        safariVC.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +28,13 @@ class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
+    {
+        
+      
+        
+
+    }
 
     /*
     // MARK: - Navigation
