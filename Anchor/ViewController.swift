@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func scannerButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toCamera", sender: UIButton())
+    }
 
 }
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MTBBarcodeScanner.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Anchor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AnchorTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-AnchorUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>03E86FF835E50993FBC649FBB59A217F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>363941D4BA290391894B0207FF7A524A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8EBFE33A13896F7C4279FCA211F1E3D8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DF61A38842AB92FE7443ED3A096DCD3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
