@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.title = "Anchor"
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,9 +22,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func scannerButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toCamera", sender: UIButton())
-    }
 
 }
 

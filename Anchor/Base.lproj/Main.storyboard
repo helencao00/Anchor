@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hE5-sk-zmi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Anchor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="mainMenuController" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,63 +22,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-zS-yb0">
-                                <rect key="frame" x="20" y="258" width="335" height="80"/>
-                                <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="7Rd-aF-Nkr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="36"/>
-                                <state key="normal" title="Scan QR Code">
-                                    <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="scannerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXb-PY-oL0"/>
-                                    <segue destination="RXH-6X-0jb" kind="show" identifier="toCamera" id="bja-UG-fWB"/>
-                                </connections>
-                            </button>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skO-Ln-VaI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="6BR-JG-vZ8"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.43137254901960786" green="0.55294117647058827" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="32"/>
-                                    <color key="textColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Anchor" id="12e-RB-Yat"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-SG-QF4">
-                                <rect key="frame" x="20" y="417" width="335" height="80"/>
-                                <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="38"/>
-                                <state key="normal" title="Converter">
-                                    <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3D7-Yv-UT4">
+                                <rect key="frame" x="37.5" y="163.5" width="300" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKL-zS-yb0">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7Rd-aF-Nkr"/>
+                                            <constraint firstAttribute="width" constant="300" id="XVb-o2-pd7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="36"/>
+                                        <state key="normal" title="Scan QR Code">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="RXH-6X-0jb" kind="show" id="QIf-co-aEZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-SG-QF4">
+                                        <rect key="frame" x="0.0" y="130" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="T38-Kd-TBF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="38"/>
+                                        <state key="normal" title="Converter">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MR0-o5-2d8" kind="show" id="8LH-XG-WQp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAz-bZ-RGz">
+                                        <rect key="frame" x="0.0" y="260" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="sJg-FQ-TZK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="38"/>
+                                        <state key="normal" title="Chat">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="QKL-zS-yb0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="258" id="AcO-qI-IpO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ahh-SG-QF4" secondAttribute="bottom" constant="170" id="ELG-Lz-HaE"/>
-                            <constraint firstItem="QKL-zS-yb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MEv-tg-0RR"/>
-                            <constraint firstItem="ahh-SG-QF4" firstAttribute="top" secondItem="QKL-zS-yb0" secondAttribute="bottom" constant="79" id="dJt-Gg-xni"/>
-                            <constraint firstAttribute="trailing" secondItem="ahh-SG-QF4" secondAttribute="trailing" constant="20" id="dnF-Sh-r55"/>
-                            <constraint firstItem="skO-Ln-VaI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h3R-T2-d6a"/>
-                            <constraint firstItem="skO-Ln-VaI" firstAttribute="centerX" secondItem="QKL-zS-yb0" secondAttribute="centerX" id="jre-cn-59z"/>
-                            <constraint firstItem="skO-Ln-VaI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xa3-wN-TT0"/>
-                            <constraint firstAttribute="trailing" secondItem="QKL-zS-yb0" secondAttribute="trailing" constant="20" id="yCo-6e-8sj"/>
-                            <constraint firstItem="ahh-SG-QF4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zob-s5-j7v"/>
+                            <constraint firstItem="3D7-Yv-UT4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q7s-hV-KnD"/>
+                            <constraint firstItem="3D7-Yv-UT4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uiG-fV-muI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Anchor" id="3I8-Hg-4nn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="-22"/>
+            <point key="canvasLocation" x="1132" y="-22.03898050974513"/>
+        </scene>
+        <!--GenerateQR Code View Controller-->
+        <scene sceneID="ivP-A7-Fke">
+            <objects>
+                <viewController id="MR0-o5-2d8" customClass="GenerateQRCodeViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Joo-tc-xQi"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOz-hN-12b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PdJ-2k-T1X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FNN-gm-oU8">
+                                <rect key="frame" x="15" y="308" width="345" height="50"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="k9i-YW-qvq"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tao-Lh-his">
+                                <rect key="frame" x="37" y="388" width="300" height="80"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="VFn-Mh-Tnd"/>
+                                    <constraint firstAttribute="height" constant="80" id="eDO-kY-sPa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateButtonTapped:" destination="MR0-o5-2d8" eventType="touchUpInside" id="HH2-aw-X6C"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-nu-ukg">
+                                <rect key="frame" x="87" y="88" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Bi4-e4-OiY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9NW-nu-ukg" firstAttribute="centerX" secondItem="FNN-gm-oU8" secondAttribute="centerX" id="1aV-eg-gyM"/>
+                            <constraint firstItem="Tao-Lh-his" firstAttribute="top" secondItem="FNN-gm-oU8" secondAttribute="bottom" constant="30" id="Plv-ig-elL"/>
+                            <constraint firstItem="FNN-gm-oU8" firstAttribute="centerY" secondItem="PdJ-2k-T1X" secondAttribute="centerY" id="Web-gq-Vjc"/>
+                            <constraint firstAttribute="trailing" secondItem="FNN-gm-oU8" secondAttribute="trailing" constant="15" id="YDX-mZ-xax"/>
+                            <constraint firstItem="FNN-gm-oU8" firstAttribute="top" secondItem="9NW-nu-ukg" secondAttribute="bottom" constant="20" id="sZD-w5-vjw"/>
+                            <constraint firstItem="FNN-gm-oU8" firstAttribute="leading" secondItem="PdJ-2k-T1X" secondAttribute="leading" constant="15" id="t6q-y0-YqW"/>
+                            <constraint firstItem="9NW-nu-ukg" firstAttribute="centerX" secondItem="Tao-Lh-his" secondAttribute="centerX" id="uxL-jQ-zWZ"/>
+                            <constraint firstItem="9NW-nu-ukg" firstAttribute="leading" secondItem="PdJ-2k-T1X" secondAttribute="leadingMargin" constant="71" id="yNj-YQ-J5O"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8Wv-dT-2SI"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="QRCodeImageView" destination="9NW-nu-ukg" id="ZOb-ec-BAQ"/>
+                        <outlet property="generateButton" destination="Tao-Lh-his" id="fDp-nY-wik"/>
+                        <outlet property="userInputTextField" destination="FNN-gm-oU8" id="f46-Cc-Fvg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-fe-puh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936.8000000000002" y="404.34782608695656"/>
         </scene>
         <!--Scanner Camera-->
         <scene sceneID="RaW-dr-9cA">
@@ -92,6 +163,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Ab0-q4-OFk"/>
                     <connections>
                         <outlet property="previewView" destination="ZrK-Od-93I" id="frr-V2-5L2"/>
                         <segue destination="X18-1g-9I5" kind="show" identifier="toWeb" id="axA-hM-dy8"/>
@@ -99,12 +171,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6Y-Zi-Vig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="-422"/>
+            <point key="canvasLocation" x="2826.4000000000001" y="-422.33883058470769"/>
         </scene>
-        <!--safariController-->
+        <!--Safari View Controller-->
         <scene sceneID="VRJ-pr-NDc">
             <objects>
-                <viewController storyboardIdentifier="safariController" title="safariController" id="X18-1g-9I5" customClass="SafariViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="safariController" id="X18-1g-9I5" customClass="SafariViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gv7-Nj-GQz"/>
                         <viewControllerLayoutGuide type="bottom" id="ERO-z0-SSx"/>
@@ -114,13 +186,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMain" id="g9z-QK-3L3"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15W-0S-R3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.5999999999999" y="-422.33883058470769"/>
+            <point key="canvasLocation" x="3764" y="-422.33883058470769"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aWi-rD-AQl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QIq-95-pMF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tTi-vA-fIN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Nz-AV-Hjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="-22.03898050974513"/>
         </scene>
     </scenes>
 </document>

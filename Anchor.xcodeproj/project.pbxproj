@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */; };
+		0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A11F26666800F0CDBB /* Barcode.swift */; };
 		0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139A1F215124008E01A9 /* AppDelegate.swift */; };
 		0D81139D1F215124008E01A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139C1F215124008E01A9 /* ViewController.swift */; };
 		0D8113A01F215124008E01A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D81139E1F215124008E01A9 /* Main.storyboard */; };
@@ -39,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateQRCodeViewController.swift; path = ViewControllers/GenerateQRCodeViewController.swift; sourceTree = "<group>"; };
+		0D3898A11F26666800F0CDBB /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Barcode.swift; path = "untitled folder/Barcode.swift"; sourceTree = "<group>"; };
+		0D3898A31F26682200F0CDBB /* MTBBarcodeScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTBBarcodeScanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		0D8113971F215124008E01A9 /* Anchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D81139A1F215124008E01A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D81139C1F215124008E01A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3898A01F26663C00F0CDBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D3898A11F26666800F0CDBB /* Barcode.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		0D81138E1F215124008E01A9 = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +131,13 @@
 		0D8113991F215124008E01A9 /* Anchor */ = {
 			isa = PBXGroup;
 			children = (
+				0D3898A01F26663C00F0CDBB /* Models */,
 				0D8113CA1F215CAD008E01A9 /* ViewControllers */,
 				0D8113CD1F215CF8008E01A9 /* Storyboards */,
 				0D8113A11F215124008E01A9 /* Assets.xcassets */,
 				0D8113A61F215124008E01A9 /* Info.plist */,
 				0D81139A1F215124008E01A9 /* AppDelegate.swift */,
+				0D3898A31F26682200F0CDBB /* MTBBarcodeScanner-Bridging-Header.h */,
 			);
 			path = Anchor;
 			sourceTree = "<group>";
@@ -151,6 +166,7 @@
 				0D81139C1F215124008E01A9 /* ViewController.swift */,
 				0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */,
 				0D8113CF1F22748E008E01A9 /* SafariViewController.swift */,
+				0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -473,7 +489,9 @@
 			files = (
 				0D8113CC1F215CDC008E01A9 /* ScannerCamera.swift in Sources */,
 				0D81139D1F215124008E01A9 /* ViewController.swift in Sources */,
+				0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */,
 				0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */,
+				0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */,
 				0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

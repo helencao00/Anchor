@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 import MTBBarcodeScanner
-
-class ScannerCamera: UIViewController {
+import SafariServices
+class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
    
     @IBOutlet var previewView: UIView!
     var scanner: MTBBarcodeScanner?
@@ -37,7 +37,10 @@ class ScannerCamera: UIViewController {
                                 ScannerCamera.urll = URL(string: stringValue)
                                 if ScannerCamera.urll != nil{
                                 if UIApplication.shared.canOpenURL(ScannerCamera.urll!){
-                                   self.performSegue(withIdentifier: "toWeb", sender: self)
+                                    let safariVC = SFSafariViewController(url: ScannerCamera.urll!)
+                                    
+                                    safariVC.delegate = self as! SFSafariViewControllerDelegate
+                                    self.present(safariVC, animated: true, completion: nil)
                                 }
                                 }else{
                                     print("frick")
@@ -61,6 +64,11 @@ class ScannerCamera: UIViewController {
         })
         
     }
+    
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         self.scanner?.stopScanning()

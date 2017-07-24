@@ -10,17 +10,22 @@ import UIKit
 import SafariServices
 
 class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
-   
+    var hasBeenLoaded:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+      
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        if hasBeenLoaded == false{
         let safariVC = SFSafariViewController(url: ScannerCamera.urll!)
-        self.present(safariVC, animated: true, completion: nil)
+        
         safariVC.delegate = self
+        self.present(safariVC, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,11 +35,15 @@ class SafariViewController: UIViewController, SFSafariViewControllerDelegate {
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController)
     {
-        
-      
+        self.dismiss(animated: true, completion: nil)
+        self.hasBeenLoaded = true
+    
+        self.navigationController?.popViewController(animated: true)
         
 
     }
+    
+    
 
     /*
     // MARK: - Navigation
