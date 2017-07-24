@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */; };
 		0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A11F26666800F0CDBB /* Barcode.swift */; };
+		0D3898A71F26941900F0CDBB /* QRToTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */; };
+		0D3898AA1F26956200F0CDBB /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A91F26956200F0CDBB /* MGPhotoHelper.swift */; };
+		0D3898AC1F269B8700F0CDBB /* TranslateToTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */; };
 		0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139A1F215124008E01A9 /* AppDelegate.swift */; };
 		0D81139D1F215124008E01A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139C1F215124008E01A9 /* ViewController.swift */; };
 		0D8113A01F215124008E01A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D81139E1F215124008E01A9 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 		0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenerateQRCodeViewController.swift; path = ViewControllers/GenerateQRCodeViewController.swift; sourceTree = "<group>"; };
 		0D3898A11F26666800F0CDBB /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Barcode.swift; path = "untitled folder/Barcode.swift"; sourceTree = "<group>"; };
 		0D3898A31F26682200F0CDBB /* MTBBarcodeScanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MTBBarcodeScanner-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRToTextViewController.swift; path = ViewControllers/QRToTextViewController.swift; sourceTree = "<group>"; };
+		0D3898A91F26956200F0CDBB /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TranslateToTextViewController.swift; path = ViewControllers/TranslateToTextViewController.swift; sourceTree = "<group>"; };
 		0D8113971F215124008E01A9 /* Anchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D81139A1F215124008E01A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D81139C1F215124008E01A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,12 +112,22 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		0D3898A81F26952F00F0CDBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D3898A91F26956200F0CDBB /* MGPhotoHelper.swift */,
+			);
+			name = Helpers;
+			path = Anchor;
+			sourceTree = "<group>";
+		};
 		0D81138E1F215124008E01A9 = {
 			isa = PBXGroup;
 			children = (
 				0D8113991F215124008E01A9 /* Anchor */,
 				0D8113AE1F215124008E01A9 /* AnchorTests */,
 				0D8113B91F215124008E01A9 /* AnchorUITests */,
+				0D3898A81F26952F00F0CDBB /* Helpers */,
 				0D8113981F215124008E01A9 /* Products */,
 				D88110ECAB837151B3F051D0 /* Pods */,
 				22003E30A7C49B5FF9E390C5 /* Frameworks */,
@@ -167,6 +183,8 @@
 				0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */,
 				0D8113CF1F22748E008E01A9 /* SafariViewController.swift */,
 				0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */,
+				0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */,
+				0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -487,9 +505,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D3898AC1F269B8700F0CDBB /* TranslateToTextViewController.swift in Sources */,
 				0D8113CC1F215CDC008E01A9 /* ScannerCamera.swift in Sources */,
+				0D3898A71F26941900F0CDBB /* QRToTextViewController.swift in Sources */,
 				0D81139D1F215124008E01A9 /* ViewController.swift in Sources */,
 				0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */,
+				0D3898AA1F26956200F0CDBB /* MGPhotoHelper.swift in Sources */,
 				0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */,
 				0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */,
 				0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */,

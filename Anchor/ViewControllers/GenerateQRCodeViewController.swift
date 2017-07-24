@@ -15,10 +15,10 @@ class GenerateQRCodeViewController: UIViewController {
     @IBOutlet weak var userInputTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userInputTextField.delegate = self
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,7 +38,25 @@ class GenerateQRCodeViewController: UIViewController {
             userInputTextField.text = "Please insert text"
         }
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    @IBAction func save(_ sender: Any) {
+        UIImageWriteToSavedPhotosAlbum(QRCodeImageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
     
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -50,3 +68,11 @@ class GenerateQRCodeViewController: UIViewController {
     */
 
 }
+
+extension GenerateQRCodeViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+}
+

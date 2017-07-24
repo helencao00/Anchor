@@ -51,7 +51,7 @@
                                             <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="MR0-o5-2d8" kind="show" id="8LH-XG-WQp"/>
+                                            <segue destination="ptr-Bh-y8w" kind="show" id="D1X-nL-Qsf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAz-bZ-RGz">
@@ -80,6 +80,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1132" y="-22.03898050974513"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ceb-zw-YH3">
+            <objects>
+                <viewController id="ptr-Bh-y8w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gTh-jl-IKm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zsh-3e-3u8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zcX-NU-ewJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="e2A-er-Lep">
+                                <rect key="frame" x="37" y="228" width="300" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-Gb-5ez">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="hoR-fr-KeH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="26"/>
+                                        <state key="normal" title="Generate QR Code">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="MR0-o5-2d8" kind="show" id="Foj-QV-CU3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pd1-KR-m2K">
+                                        <rect key="frame" x="0.0" y="130" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="pgx-5v-5kr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="26"/>
+                                        <state key="normal" title="Translate QR to Text">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="S0z-5G-0vc" kind="show" id="j4A-ED-WUm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="dhL-1h-aPs"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e2A-er-Lep" firstAttribute="centerY" secondItem="zcX-NU-ewJ" secondAttribute="centerY" id="9O4-Ss-ZFs"/>
+                            <constraint firstItem="e2A-er-Lep" firstAttribute="centerX" secondItem="zcX-NU-ewJ" secondAttribute="centerX" id="KwG-DR-Wpj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8O-Lx-AKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2014" y="319"/>
         </scene>
         <!--GenerateQR Code View Controller-->
         <scene sceneID="ivP-A7-Fke">
@@ -138,17 +198,156 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="8Wv-dT-2SI"/>
+                    <navigationItem key="navigationItem" id="8Wv-dT-2SI">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="goB-u1-jB9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbH-xD-TqJ">
+                                <rect key="frame" x="313" y="7" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="MR0-o5-2d8" eventType="touchUpInside" id="PqY-oq-wqQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="QRCodeImageView" destination="9NW-nu-ukg" id="ZOb-ec-BAQ"/>
+                        <outlet property="QRCodeImageView" destination="9NW-nu-ukg" id="bbq-B9-Dj1"/>
                         <outlet property="generateButton" destination="Tao-Lh-his" id="fDp-nY-wik"/>
                         <outlet property="userInputTextField" destination="FNN-gm-oU8" id="f46-Cc-Fvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-fe-puh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936.8000000000002" y="404.34782608695656"/>
+            <point key="canvasLocation" x="2881" y="242"/>
+        </scene>
+        <!--To Text View Controller-->
+        <scene sceneID="2TG-PS-IWE">
+            <objects>
+                <viewController id="S0z-5G-0vc" customClass="QRToTextViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sun-Yr-cd2"/>
+                        <viewControllerLayoutGuide type="bottom" id="8cO-yj-Rs8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EbB-2k-7oS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-7J-H1j">
+                                <rect key="frame" x="37" y="417" width="300" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scs-uE-t0c">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="ams-JJ-wLC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
+                                        <state key="normal" title="Choose Photo">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choosePhotoButtonTapped:" destination="S0z-5G-0vc" eventType="touchUpInside" id="por-sV-xsl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-Ib-zqq">
+                                        <rect key="frame" x="0.0" y="130" width="300" height="80"/>
+                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="gd9-dk-ODE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
+                                        <state key="normal" title="Scan">
+                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="ssT-ov-HzW"/>
+                                </constraints>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-WU-q4p">
+                                <rect key="frame" x="67" y="123" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="1mH-Wz-RfL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-K3-enF">
+                                <rect key="frame" x="67" y="218" width="240" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="19"/>
+                                <state key="normal" title="Translate">
+                                    <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gd2-95-PHy" kind="show" identifier="toTranslate" id="PLA-jG-2Wj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="centerX" secondItem="BXz-7J-H1j" secondAttribute="centerX" id="3aD-2e-3qD"/>
+                            <constraint firstItem="BXz-7J-H1j" firstAttribute="centerX" secondItem="EbB-2k-7oS" secondAttribute="centerX" id="TF9-5B-2mz"/>
+                            <constraint firstItem="8cO-yj-Rs8" firstAttribute="top" secondItem="BXz-7J-H1j" secondAttribute="bottom" constant="40" id="Z7I-cw-k2w"/>
+                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="top" secondItem="Sun-Yr-cd2" secondAttribute="bottom" constant="59" id="aa2-gW-Cit"/>
+                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="leading" secondItem="EbB-2k-7oS" secondAttribute="leadingMargin" constant="51" id="hJa-H5-6AF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8NQ-WU-q4p" id="9MO-J6-Jfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Skk-9c-Mmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857" y="937"/>
+        </scene>
+        <!--Translate To Text View Controller-->
+        <scene sceneID="FRf-GI-bXl">
+            <objects>
+                <viewController id="gd2-95-PHy" customClass="TranslateToTextViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E54-cy-xKB"/>
+                        <viewControllerLayoutGuide type="bottom" id="72q-zu-iCt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2cd-TR-8av">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isf-yP-ugd">
+                                <rect key="frame" x="67" y="157" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="TbT-5M-kdt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-He-cGB">
+                                <rect key="frame" x="37" y="413" width="300" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Rdh-lp-2Vc"/>
+                                    <constraint firstAttribute="width" constant="300" id="rxa-Zk-Pe5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="isf-yP-ugd" firstAttribute="leading" secondItem="2cd-TR-8av" secondAttribute="leadingMargin" constant="51" id="05D-ff-6jb"/>
+                            <constraint firstItem="isf-yP-ugd" firstAttribute="centerX" secondItem="2cd-TR-8av" secondAttribute="centerX" id="5QO-tf-GaT"/>
+                            <constraint firstItem="isf-yP-ugd" firstAttribute="top" secondItem="E54-cy-xKB" secondAttribute="bottom" constant="93" id="Kvh-yc-Q7C"/>
+                            <constraint firstItem="72q-zu-iCt" firstAttribute="top" secondItem="TkN-He-cGB" secondAttribute="bottom" constant="174" id="ld7-fv-zka"/>
+                            <constraint firstItem="TkN-He-cGB" firstAttribute="centerX" secondItem="isf-yP-ugd" secondAttribute="centerX" id="v0T-oN-azr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="QRImageView" destination="isf-yP-ugd" id="E5M-aU-32i"/>
+                        <outlet property="textLabel" destination="TkN-He-cGB" id="KYZ-GN-MeC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opv-aP-59Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3762" y="953"/>
         </scene>
         <!--Scanner Camera-->
         <scene sceneID="RaW-dr-9cA">
