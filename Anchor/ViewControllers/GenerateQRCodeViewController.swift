@@ -26,7 +26,7 @@ class GenerateQRCodeViewController: UIViewController {
     
     @IBAction func generateButtonTapped(_ sender: UIButton) {
         if userInputTextField.text != ""{
-        let image = Barcode.fromString(string: "\(String(describing: userInputTextField.text))")
+        let image = Barcode.fromString(string: userInputTextField.text!)
         //let convert = Barcode.convertToUIImage(cmage: image!)
             let input = image
             let transform = CGAffineTransform(scaleX: 5.0, y: 5.0)
@@ -42,7 +42,15 @@ class GenerateQRCodeViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func save(_ sender: Any) {
+        if QRCodeImageView.image != nil{
         UIImageWriteToSavedPhotosAlbum(QRCodeImageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }
+        else{
+            let ac = UIAlertController(title: "Save error", message: "No QR Code detected", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+
+        }
     }
     
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
@@ -52,7 +60,7 @@ class GenerateQRCodeViewController: UIViewController {
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         } else {
-            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Saved!", message: "Your QR Code has been saved to your photos.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }

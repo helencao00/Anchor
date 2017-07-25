@@ -257,9 +257,12 @@
                                             <constraint firstAttribute="height" constant="80" id="gd9-dk-ODE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
-                                        <state key="normal" title="Scan">
+                                        <state key="normal" title="Scan for Text">
                                             <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="KHf-8E-JKJ" kind="show" id="kc6-ZQ-Qbe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -268,6 +271,7 @@
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-WU-q4p">
                                 <rect key="frame" x="67" y="123" width="240" height="240"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="1mH-Wz-RfL"/>
                                 </constraints>
@@ -296,11 +300,64 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="8NQ-WU-q4p" id="9MO-J6-Jfg"/>
+                        <outlet property="translateButton" destination="vVL-K3-enF" id="bsK-5k-jBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skk-9c-Mmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2857" y="937"/>
+        </scene>
+        <!--Text Scanner View Controller-->
+        <scene sceneID="m2f-tI-gPE">
+            <objects>
+                <viewController id="KHf-8E-JKJ" customClass="TextScannerViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pkF-Mo-9B4"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Za-cE-heS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qd5-9g-wK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="qd5-9g-wK3" id="ff9-p5-CWc"/>
+                        <segue destination="4iK-Kh-ka9" kind="show" identifier="toScannedText" id="HUv-a6-1na"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-tP-Q6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3779" y="1357"/>
+        </scene>
+        <!--Scanned Text View Controller-->
+        <scene sceneID="wUn-94-k3D">
+            <objects>
+                <viewController id="4iK-Kh-ka9" customClass="ScannedTextViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Np-65-5t7"/>
+                        <viewControllerLayoutGuide type="bottom" id="upc-8E-rhm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R6d-wH-fcv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOV-KF-uEa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="scannedTextLabel" destination="fOV-KF-uEa" id="595-8B-rS8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7u-3M-Q27" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4621.6000000000004" y="1366.8665667166417"/>
         </scene>
         <!--Translate To Text View Controller-->
         <scene sceneID="FRf-GI-bXl">
@@ -314,29 +371,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-He-cGB">
+                                <rect key="frame" x="0.0" y="354" width="375" height="313"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="Rdh-lp-2Vc"/>
+                                    <constraint firstAttribute="width" constant="375" id="rxa-Zk-Pe5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isf-yP-ugd">
-                                <rect key="frame" x="67" y="157" width="240" height="240"/>
+                                <rect key="frame" x="67" y="94" width="240" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="TbT-5M-kdt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkN-He-cGB">
-                                <rect key="frame" x="37" y="413" width="300" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Rdh-lp-2Vc"/>
-                                    <constraint firstAttribute="width" constant="300" id="rxa-Zk-Pe5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="isf-yP-ugd" firstAttribute="leading" secondItem="2cd-TR-8av" secondAttribute="leadingMargin" constant="51" id="05D-ff-6jb"/>
                             <constraint firstItem="isf-yP-ugd" firstAttribute="centerX" secondItem="2cd-TR-8av" secondAttribute="centerX" id="5QO-tf-GaT"/>
-                            <constraint firstItem="isf-yP-ugd" firstAttribute="top" secondItem="E54-cy-xKB" secondAttribute="bottom" constant="93" id="Kvh-yc-Q7C"/>
-                            <constraint firstItem="72q-zu-iCt" firstAttribute="top" secondItem="TkN-He-cGB" secondAttribute="bottom" constant="174" id="ld7-fv-zka"/>
+                            <constraint firstItem="isf-yP-ugd" firstAttribute="top" secondItem="E54-cy-xKB" secondAttribute="bottom" constant="30" id="Kvh-yc-Q7C"/>
+                            <constraint firstItem="72q-zu-iCt" firstAttribute="top" secondItem="TkN-He-cGB" secondAttribute="bottom" id="ld7-fv-zka"/>
                             <constraint firstItem="TkN-He-cGB" firstAttribute="centerX" secondItem="isf-yP-ugd" secondAttribute="centerX" id="v0T-oN-azr"/>
                         </constraints>
                     </view>
@@ -347,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opv-aP-59Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3762" y="953"/>
+            <point key="canvasLocation" x="3764" y="671.51424287856082"/>
         </scene>
         <!--Scanner Camera-->
         <scene sceneID="RaW-dr-9cA">

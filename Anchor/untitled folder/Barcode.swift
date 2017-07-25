@@ -29,7 +29,11 @@ class Barcode {
         // let ciimg = CIImage(cgImage: cgImage)
         let features = detector.features(in: barcodeImage)
         let please = features.first as! CIQRCodeFeature
-        return "\(please.messageString!)"
+        guard let message = please.messageString else {
+            return ""
+        }
+   
+        return message
         //for feature in features as! [CIQRCodeFeature] {
         //   print(feature.messageString!)
         

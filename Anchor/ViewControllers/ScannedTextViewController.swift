@@ -1,28 +1,23 @@
 //
-//  TranslateToTextViewController.swift
+//  ScannedTextViewController.swift
 //  Anchor
 //
-//  Created by Helen Cao on 7/24/17.
+//  Created by Helen Cao on 7/25/17.
 //  Copyright © 2017 Make School. All rights reserved.
 //
 
 import UIKit
 
-class TranslateToTextViewController: UIViewController {
-    var image: UIImage?
-    
-    @IBOutlet weak var QRImageView: UIImageView!
+class ScannedTextViewController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
-    
+    @IBOutlet weak var scannedTextLabel: UILabel!
+    var stringer: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        QRImageView.image = image
+        stringer = TextScannerViewController.stringValuee
+        let realString = "Scanned text is: \(stringer!)"
+        scannedTextLabel.text = realString
         // Do any additional setup after loading the view.
-        let ciimage = CIImage(image: image!)
-        
-        textLabel!.text = "Translated text: \(Barcode.toString(barcodeImage: ciimage!))"
-     
     }
 
     override func didReceiveMemoryWarning() {

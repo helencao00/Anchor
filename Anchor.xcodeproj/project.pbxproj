@@ -12,6 +12,8 @@
 		0D3898A71F26941900F0CDBB /* QRToTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */; };
 		0D3898AA1F26956200F0CDBB /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898A91F26956200F0CDBB /* MGPhotoHelper.swift */; };
 		0D3898AC1F269B8700F0CDBB /* TranslateToTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */; };
+		0D3898AE1F27A32700F0CDBB /* TextScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898AD1F27A32700F0CDBB /* TextScannerViewController.swift */; };
+		0D3898B01F27ACBA00F0CDBB /* ScannedTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898AF1F27ACBA00F0CDBB /* ScannedTextViewController.swift */; };
 		0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139A1F215124008E01A9 /* AppDelegate.swift */; };
 		0D81139D1F215124008E01A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139C1F215124008E01A9 /* ViewController.swift */; };
 		0D8113A01F215124008E01A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D81139E1F215124008E01A9 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRToTextViewController.swift; path = ViewControllers/QRToTextViewController.swift; sourceTree = "<group>"; };
 		0D3898A91F26956200F0CDBB /* MGPhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
 		0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TranslateToTextViewController.swift; path = ViewControllers/TranslateToTextViewController.swift; sourceTree = "<group>"; };
+		0D3898AD1F27A32700F0CDBB /* TextScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextScannerViewController.swift; path = ViewControllers/TextScannerViewController.swift; sourceTree = "<group>"; };
+		0D3898AF1F27ACBA00F0CDBB /* ScannedTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannedTextViewController.swift; path = ViewControllers/ScannedTextViewController.swift; sourceTree = "<group>"; };
 		0D8113971F215124008E01A9 /* Anchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D81139A1F215124008E01A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D81139C1F215124008E01A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */,
 				0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */,
 				0D3898AB1F269B8700F0CDBB /* TranslateToTextViewController.swift */,
+				0D3898AD1F27A32700F0CDBB /* TextScannerViewController.swift */,
+				0D3898AF1F27ACBA00F0CDBB /* ScannedTextViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -507,12 +513,14 @@
 			files = (
 				0D3898AC1F269B8700F0CDBB /* TranslateToTextViewController.swift in Sources */,
 				0D8113CC1F215CDC008E01A9 /* ScannerCamera.swift in Sources */,
+				0D3898B01F27ACBA00F0CDBB /* ScannedTextViewController.swift in Sources */,
 				0D3898A71F26941900F0CDBB /* QRToTextViewController.swift in Sources */,
 				0D81139D1F215124008E01A9 /* ViewController.swift in Sources */,
 				0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */,
 				0D3898AA1F26956200F0CDBB /* MGPhotoHelper.swift in Sources */,
 				0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */,
 				0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */,
+				0D3898AE1F27A32700F0CDBB /* TextScannerViewController.swift in Sources */,
 				0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

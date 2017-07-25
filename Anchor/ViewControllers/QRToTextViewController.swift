@@ -13,10 +13,10 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
     var selectedImage: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var translateButton: UIButton!
     // MARK: - Properties
     
     let picker = UIImagePickerController()
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -28,6 +28,7 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+        translateButton.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +41,7 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
         picker.sourceType = .photoLibrary
         picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         present(picker, animated: true, completion: nil)
+        
     }
     
     
@@ -62,9 +64,15 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
         imageView.image = chosenImage //4
         self.selectedImage = chosenImage
         dismiss(animated:true, completion: nil) //5
+        if selectedImage != nil{
+            translateButton.isHidden = false
+        }
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
          dismiss(animated: true, completion: nil)
+        if selectedImage != nil{
+            translateButton.isHidden = false
+        }
     }
 
 }
