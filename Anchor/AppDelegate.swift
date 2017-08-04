@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,14 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        configureInitialRootViewController(for: window)
         let navigationBarAppearace = UINavigationBar.appearance()
         
         navigationBarAppearace.tintColor = UIColor(red:1.00, green:0.90, blue:0.71, alpha:1.0)
         navigationBarAppearace.barTintColor = UIColor(red:0.43, green:0.55, blue:0.70, alpha:1.0)
        
-            navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Copperplate", size: 38)!, NSForegroundColorAttributeName: UIColor(red:1.00, green:0.90, blue:0.71, alpha:1.0)]
+            navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Copperplate", size: 30)!, NSForegroundColorAttributeName: UIColor(red:1.00, green:0.90, blue:0.71, alpha:1.0)]
         
-    
+        
         
         return true
     }
@@ -50,6 +53,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
+}
+extension AppDelegate {
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            
+            User.setCurrent(user)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }
+    
+    
+        
+    }
 
 }
 

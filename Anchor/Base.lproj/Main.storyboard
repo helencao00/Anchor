@@ -13,7 +13,7 @@
         <!--Anchor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="mainMenuController" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -64,6 +64,9 @@
                                         <state key="normal" title="Chat">
                                             <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chatButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCN-b6-clp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,6 +79,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Anchor" id="3I8-Hg-4nn"/>
+                    <connections>
+                        <outlet property="chatButton" destination="rAz-bZ-RGz" id="hBv-es-MAr"/>
+                        <segue destination="T4u-H9-saM" kind="show" identifier="toLogin" id="hBn-kj-WZJ"/>
+                        <segue destination="e26-dL-ZL8" kind="show" identifier="toChat" id="hTN-sp-c48"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8O-Lx-AKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="319"/>
+            <point key="canvasLocation" x="2952.8000000000002" y="318.89055472263868"/>
         </scene>
         <!--GenerateQR Code View Controller-->
         <scene sceneID="ivP-A7-Fke">
@@ -219,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-fe-puh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2881" y="242"/>
+            <point key="canvasLocation" x="3820" y="241.52923538230885"/>
         </scene>
         <!--To Text View Controller-->
         <scene sceneID="2TG-PS-IWE">
@@ -305,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skk-9c-Mmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="937"/>
+            <point key="canvasLocation" x="3796" y="936.88155922038993"/>
         </scene>
         <!--Text Scanner View Controller-->
         <scene sceneID="m2f-tI-gPE">
@@ -326,7 +334,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzp-tP-Q6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3779" y="1357"/>
+            <point key="canvasLocation" x="4717.6000000000004" y="1356.9715142428786"/>
         </scene>
         <!--Scanned Text View Controller-->
         <scene sceneID="wUn-94-k3D">
@@ -357,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7u-3M-Q27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4621.6000000000004" y="1366.8665667166417"/>
+            <point key="canvasLocation" x="5560.8000000000002" y="1366.8665667166417"/>
         </scene>
         <!--Translate To Text View Controller-->
         <scene sceneID="FRf-GI-bXl">
@@ -405,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opv-aP-59Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3764" y="671.51424287856082"/>
+            <point key="canvasLocation" x="4703.1999999999998" y="671.51424287856082"/>
         </scene>
         <!--Scanner Camera-->
         <scene sceneID="RaW-dr-9cA">
@@ -465,6 +473,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Nz-AV-Hjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192.80000000000001" y="-22.03898050974513"/>
+        </scene>
+        <!--login-->
+        <scene sceneID="NZ2-Fk-xOd">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="login" storyboardName="Login" referencedIdentifier="login" id="T4u-H9-saM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhn-Ze-zJR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1113" y="734"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="wGB-yE-yng">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="e26-dL-ZL8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hW0-eu-enD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="785"/>
         </scene>
     </scenes>
 </document>

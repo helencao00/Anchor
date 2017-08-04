@@ -8,7 +8,12 @@ target 'Anchor' do
   # Pods for Anchor
 
   pod ‘MTBBarcodeScanner’
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'JSQMessagesViewController'
 
 
 

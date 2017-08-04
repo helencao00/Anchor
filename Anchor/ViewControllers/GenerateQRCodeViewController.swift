@@ -13,6 +13,8 @@ class GenerateQRCodeViewController: UIViewController {
     @IBOutlet weak var QRCodeImageView: UIImageView!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var userInputTextField: UITextField!
+    let preferredlanguage = NSLocale.preferredLanguages[0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userInputTextField.delegate = self
@@ -24,8 +26,20 @@ class GenerateQRCodeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func checkIllegalCharacters(input: String) -> Bool{
+        let realString = input.components(separatedBy: " ")
+        for word in realString{
+            if word.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) != nil {
+                return false
+            }
+        }
+        return true
+       
+        
+    }
+    
     @IBAction func generateButtonTapped(_ sender: UIButton) {
-        if userInputTextField.text != ""{
+        if userInputTextField.text != "" && checkIllegalCharacters(input: userInputTextField.text!) == true{
         let image = Barcode.fromString(string: userInputTextField.text!)
         //let convert = Barcode.convertToUIImage(cmage: image!)
             let input = image
@@ -35,7 +49,7 @@ class GenerateQRCodeViewController: UIViewController {
         self.QRCodeImageView.image = imageOutput
         }
         else{
-            userInputTextField.text = "Please insert text"
+            userInputTextField.text = "Please insert valid text"
         }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

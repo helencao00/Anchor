@@ -23,8 +23,8 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
         scanner = MTBBarcodeScanner(previewView: previewView)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         MTBBarcodeScanner.requestCameraPermission(success: { success in
             if success {
