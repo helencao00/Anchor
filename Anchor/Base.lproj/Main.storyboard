@@ -459,7 +459,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aWi-rD-AQl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QIq-95-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -15,7 +15,12 @@ target 'Anchor' do
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
 
-
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FirebaseUI/Facebook'
+  
+  pod ‘FirebaseUI/Google’
+  pod 'GoogleSignIn'
 
   target 'AnchorTests' do
     inherit! :search_paths

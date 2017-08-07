@@ -50,7 +50,7 @@ class FriendsViewController: UIViewController {
             self.users = users
             let count = users.count
             print("Users count: \(count)")
-            
+            self.friends.removeAll()
             if self.friends.isEmpty{
                 var friendsCount = 0
                 for usern in users{
@@ -124,16 +124,17 @@ class FriendsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    @IBAction func chatButtonTapped(_ sender: UIButton) {
-        guard let selectedUser = selectedUser else { return }
-       
-        ChatService.checkForExistingChat(with: selectedUser) { (chat) in
-          
-            self.existingChat = chat
-            
-            self.performSegue(withIdentifier: "toChat", sender: self)
-        }
-    }
+//    @IBAction func chatButtonTapped(_ sender: UIButton) {
+//        print("chat touched")
+//        guard let selectedUser = selectedUser else { return }
+//       
+//        ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+//          
+//            self.existingChat = chat
+//            
+//            self.performSegue(withIdentifier: "toChat", sender: self)
+//        }
+//    }
     
     
     //    func filterContentForSearchText(searchText: String, scope: String = "All") {
@@ -159,14 +160,16 @@ class FriendsViewController: UIViewController {
 
 extension FriendsViewController: UITableViewDelegate{
   
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! FriendCell
-        selectedUser = friends[indexPath.row]
-        tableView.reloadData()
-               
-    }
+ 
+}
+/*
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //let cell = tableView.cellForRow(at: indexPath) as! FriendCell
+    selectedUser = friends[indexPath.row]
+    tableView.reloadData()
     
 }
+*/
 
 extension FriendsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -177,7 +180,7 @@ extension FriendsViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "actualFriend", for: indexPath) as! FriendCell
-        cell.selectionStyle = .none
+        
         var friend: User
         if searchController.isActive && searchController.searchBar.text != ""{
             
@@ -188,10 +191,24 @@ extension FriendsViewController: UITableViewDataSource{
         }
         
         cell.usernameLabel?.text = friend.username
-        
+        //cell.selectionStyle = .none
+        selectedUser = friends[indexPath.row]
+
+        cell.completionHandler = { [weak self] (cell) in
+            guard let selectedUser = self?.selectedUser else { return }
+            
+            ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+                
+                self?.existingChat = chat
+                
+                self?.performSegue(withIdentifier: "toChat", sender: self)
+            }
+            
+            
+        }
         return cell
     }
-   
+    
   
    
     

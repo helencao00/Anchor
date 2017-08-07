@@ -18,7 +18,7 @@ class FindFriendsViewController: UIViewController {
     var fiilteredUsers = [User]()
     var users = [User]()
     var nonfriends = [User]()
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -32,16 +32,16 @@ class FindFriendsViewController: UIViewController {
         tableView.tableHeaderView = searchController.searchBar
         // Do any additional setup after loading the view.
     }
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if searchController.isActive && searchController.searchBar.text != ""{
-//    
-//                friend = fiilteredUsers[indexPath.row]
-//            } else {
-//    
-//                friend = users[indexPath.row]
-//            }
-//    
-//        }
+    //        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //            if searchController.isActive && searchController.searchBar.text != ""{
+    //
+    //                friend = fiilteredUsers[indexPath.row]
+    //            } else {
+    //
+    //                friend = users[indexPath.row]
+    //            }
+    //
+    //        }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -57,6 +57,7 @@ class FindFriendsViewController: UIViewController {
                         self.nonfriends.append(usern)
                     } else {
                         friendsCount += 1
+                        usern.isFriends = true
                     }
                     if users.count - friendsCount == self.nonfriends.count {
                         self.users = self.nonfriends
@@ -166,7 +167,8 @@ extension FindFriendsViewController: UITableViewDataSource{
         //cell.delegate = self
         
         cell.tapAction = { (celll) in
-                        FollowService.setIsFollowing(cell.addFriendButton.isSelected, fromCurrentUserTo: cell.user! , success: {(success) in
+            print(cell.addFriendButton.isSelected)
+            FollowService.setIsFollowing(!cell.addFriendButton.isSelected, fromCurrentUserTo: cell.user! , success: {(success) in
                 defer {
                     cell.addFriendButton.isUserInteractionEnabled = true
                 }
@@ -174,22 +176,34 @@ extension FindFriendsViewController: UITableViewDataSource{
                 guard success else { return }
                 
                 cell.addFriendButton.isSelected = !cell.addFriendButton.isSelected
-
+                
                 //            cell.backgroundColor
+                let indexNum = tableView.indexPath(for: cell)
+                self.nonfriends[(indexNum?.row)!].isFriends = !self.nonfriends[(indexNum?.row)!].isFriends
                 self.tableView.reloadRows(at: [indexPath], with: .none)
-
+                
             }
-        )}
+            )}
         
         if searchController.isActive && searchController.searchBar.text != ""{
             
             friend = fiilteredUsers[indexPath.row]
+            
         } else {
             
             friend = users[indexPath.row]
         }
         
         cell.user = friend
+        
+        /*
+         then when you get your users from firebase set the user.isfriend to true when setting them as a friend
+         then in your cellForRowat you simply check if that person isa friend
+         and if they are then set cell.addfriendbutton.isSelcted = true
+         else false
+         
+         */
+        cell.addFriendButton.isSelected = (friend.isFriends) ? true: false
         cell.usernameLabel?.text = friend.username
         
         return cell
@@ -204,19 +218,19 @@ extension FindFriendsViewController: FindFriendsCellDelegate {
         followButton.isUserInteractionEnabled = false
         let followee = users[indexPath.row]
         
-        FollowService.setIsFollowing(!followee.isFollowed, fromCurrentUserTo: followee) { (success) in
+        FollowService.setIsFollowing(!followee.isFriends, fromCurrentUserTo: followee) { (success) in
             defer {
                 followButton.isUserInteractionEnabled = true
             }
             
             guard success == true else { return }
             
-            followee.isFollowed = !followee.isFollowed
+            followee.isFriends = !followee.isFriends
             //            cell.backgroundColor
             self.tableView.reloadRows(at: [indexPath], with: .none)
         }
-
-
+        
+        
     }
     
 }

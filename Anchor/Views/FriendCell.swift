@@ -10,6 +10,8 @@ import UIKit
 
 class FriendCell: UITableViewCell {
     
+    var completionHandler: ((UITableViewCell) -> Void)?
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var chatButton: UIButton!
@@ -23,6 +25,10 @@ class FriendCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        selectionStyle = .none
+    }
+    @IBAction func chatButtonTapped(_ sender: UIButton) {
+        completionHandler?(self)
     }
 
 }

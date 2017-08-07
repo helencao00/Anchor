@@ -32,10 +32,11 @@ class ProfileViewController: UIViewController {
         
         authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
             guard user == nil else { return }
+            print(self.view.window?.rootViewController?.childViewControllers)
+            print(self.view.window?.rootViewController?.childViewControllers.count)
             
-            let loginViewController = UIStoryboard.initialViewController(for: .login)
-            self.view.window?.rootViewController = loginViewController
-            self.view.window?.makeKeyAndVisible()
+            self.performSegue(withIdentifier: "toMain", sender: self)
+
         }
 
 

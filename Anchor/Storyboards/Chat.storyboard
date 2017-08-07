@@ -182,7 +182,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Chat"/>
                                                     <connections>
-                                                        <action selector="chatButtonTapped:" destination="PI5-Ny-P3t" eventType="touchUpInside" id="Rr5-Wm-1aJ"/>
+                                                        <action selector="chatButtonTapped:" destination="iCh-AL-1Ce" eventType="touchUpInside" id="kk7-md-44J"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -268,11 +268,21 @@
                     <connections>
                         <outlet property="logoutButton" destination="GFw-fM-2ia" id="qq8-KL-uIn"/>
                         <outlet property="usernameLabel" destination="Lo2-5q-xC7" id="N7h-G0-OTZ"/>
+                        <segue destination="Ob9-zb-10i" kind="unwind" identifier="toMain" unwindAction="unwindToMain:" id="dgc-FR-SA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFA-0x-evt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ob9-zb-10i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2488.8000000000002" y="2383.3583208395803"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="F8J-aR-zkz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="3vb-N2-sp1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfD-FN-9iA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3485" y="2505"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="h5Q-i9-RcM">
@@ -469,6 +479,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="M7C-VQ-nrC"/>
+        <segue reference="wjS-S8-MQ8"/>
     </inferredMetricsTieBreakers>
 </document>

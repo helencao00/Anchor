@@ -13,21 +13,29 @@ class ChatListViewController: UIViewController {
      var chats = [Chat]()
     var userChatsHandle: DatabaseHandle = 0
     var userChatsRef: DatabaseReference?
-    
+    var formatedDate: ()
   
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
        
+       
+    
+//        tableView.transform = CGAffineTransform(scaleX: -1,y: 1)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         userChatsHandle = UserService.observeChats { [weak self] (ref, chats) in
             self?.userChatsRef = ref
             self?.chats = chats
+            self?.chats.sort(by: {$0.lastMessageSent!.compare($1.lastMessageSent! as Date) == ComparisonResult.orderedDescending})
+
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }
-        
- 
+//        tableView.reloadData()
     }
     
     deinit {
@@ -73,33 +81,35 @@ extension ChatListViewController: UITableViewDataSource{
         cell.usernameLabel.text = chat.title
         cell.lastMessageLabel.text = chat.lastMessage
         
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date
-        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+//        let formatter = DateFormatter()
+//        // initially set the format based on your datepicker date
+//        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
         
-        let myString = formatter.string(from: Date())
+        // let myString = formatter.string(from: Date())
         // convert your string to date
-        let yourDate = formatter.date(from: myString)
+//        let yourDate = formatter.date(from: myString)
         //then again set the date format whhich type of output you need
-        formatter.dateFormat = "yy-MM-dd"
+//        formatter.dateFormat = "dd-MM-yy"
         // again convert your date to string
-        let myStringafd = formatter.string(from: chat.lastMessageSent!)
         
-        let inFormatter = DateFormatter()
-        inFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
-        inFormatter.dateFormat = "HH:mm"
-        
-        let outFormatter = DateFormatter()
-        outFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
-        outFormatter.dateFormat = "hh:mm"
-        
-        
-        let inDate = chat.lastMessageSent
-        let outString = outFormatter.string(from: inDate!)
-        print(outString)
-        print(myStringafd)
-        cell.dateLabel.text = myStringafd
-        cell.timeLabel.text = outString
+//        chat.lastMessageSent = formatter.dateFormat = "dd-MM-yy"
+//        let myStringafd = formatter.string(from: chat.lastMessageSent!)
+//        
+//        let inFormatter = DateFormatter()
+//        inFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+//        inFormatter.dateFormat = "HH:mm"
+//        
+//        let outFormatter = DateFormatter()
+//        outFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+//        outFormatter.dateFormat = "hh:mm"
+//        
+//        
+//        let inDate = chat.lastMessageSent
+//        let outString = outFormatter.string(from: inDate!)
+//        print(outString)
+//        print(myStringafd)
+        cell.dateLabel.text = chat.lastMessageSent?.convertToString()
+//        cell.timeLabel.text = outString
         return cell
     }
     

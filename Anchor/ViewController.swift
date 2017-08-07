@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Anchor"
         
     }
+    @IBAction func unwindToMain(_ segue: UIStoryboardSegue) {
+    
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
