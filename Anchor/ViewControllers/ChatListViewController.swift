@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class ChatListViewController: UIViewController {
+    @IBOutlet weak var introLabel: UILabel!
      var chats = [Chat]()
     var userChatsHandle: DatabaseHandle = 0
     var userChatsRef: DatabaseReference?
@@ -20,22 +21,36 @@ class ChatListViewController: UIViewController {
         super.viewDidLoad()
 //        tableView.backgroundView = nil
 //        tableView.backgroundView = view
-        
+        self.tableView.isHidden = false
+        self.introLabel.text = ""
+
         self.tableView.backgroundColor = UIColor(red: 255, green: 229, blue: 182, alpha: 1)
 //        tableView.transform = CGAffineTransform(scaleX: -1,y: 1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         userChatsHandle = UserService.observeChats { [weak self] (ref, chats) in
             self?.userChatsRef = ref
             self?.chats = chats
             self?.chats.sort(by: {$0.lastMessageSent!.compare($1.lastMessageSent! as Date) == ComparisonResult.orderedDescending})
             print(chats)
+            if chats.count == 0{
+                self?.tableView.isHidden = true
+                self?.introLabel.text = "Tap find friends in the lower left corner to chat"
+            } else {
+                self?.tableView.isHidden = false
+                self?.introLabel.text = ""
+            }
+          
+        
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
+           
         }
+        
 //        tableView.reloadData()
     }
     
@@ -78,9 +93,10 @@ extension ChatListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "username") as! ChatListViewCell
         cell.selectionStyle = .none
-
+        
         let chat = chats[indexPath.row]
         cell.usernameLabel.text = chat.title
+
         cell.lastMessageLabel.text = chat.lastMessage
         
         let formatter = DateFormatter()

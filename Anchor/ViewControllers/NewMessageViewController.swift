@@ -164,6 +164,9 @@ extension NewMessageViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
          tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 73
+    }
 }
 extension NewMessageViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

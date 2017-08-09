@@ -34,16 +34,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LastMessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuf-X2-fQt">
-                                                    <rect key="frame" x="15" y="29" width="280" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LastMessage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuf-X2-fQt">
+                                                    <rect key="frame" x="15" y="29" width="346" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="IXE-CR-l08"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="17"/>
                                                     <color key="textColor" red="0.43137254901960786" green="0.55294117647058827" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDO-ms-iwe">
-                                                    <rect key="frame" x="15" y="8" width="280" height="19.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDO-ms-iwe">
+                                                    <rect key="frame" x="15" y="8" width="346" height="20"/>
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                                     <color key="textColor" red="0.30588235294117649" green="0.396078431372549" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -60,6 +61,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="xa9-PN-r64" firstAttribute="top" secondItem="vuf-X2-fQt" secondAttribute="bottom" constant="16" id="3Zq-ic-i4g"/>
+                                                <constraint firstItem="GDO-ms-iwe" firstAttribute="leading" secondItem="vuf-X2-fQt" secondAttribute="leading" id="4Jm-fL-5kL"/>
+                                                <constraint firstItem="vuf-X2-fQt" firstAttribute="top" secondItem="GDO-ms-iwe" secondAttribute="bottom" constant="1" id="Guw-vU-seU"/>
+                                                <constraint firstItem="GDO-ms-iwe" firstAttribute="top" secondItem="98w-gl-Xa1" secondAttribute="topMargin" id="OWV-J7-LTX"/>
+                                                <constraint firstItem="GDO-ms-iwe" firstAttribute="trailing" secondItem="vuf-X2-fQt" secondAttribute="trailing" id="dsj-Au-q3i"/>
+                                                <constraint firstItem="GDO-ms-iwe" firstAttribute="centerX" secondItem="98w-gl-Xa1" secondAttribute="centerX" id="huC-eJ-eKu"/>
+                                                <constraint firstItem="GDO-ms-iwe" firstAttribute="leading" secondItem="98w-gl-Xa1" secondAttribute="leadingMargin" constant="7" id="p1w-fJ-4iO"/>
                                                 <constraint firstItem="xa9-PN-r64" firstAttribute="trailing" secondItem="98w-gl-Xa1" secondAttribute="trailingMargin" constant="-6" id="tfl-VH-IuE"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="xa9-PN-r64" secondAttribute="bottom" constant="-7.5" id="yAT-9j-uOq"/>
                                             </constraints>
@@ -77,6 +85,15 @@
                                     <outlet property="delegate" destination="u62-1t-deD" id="G1y-sU-6cR"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap find friends in the lower left corner to chat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBY-av-GWJ">
+                                <rect key="frame" x="15" y="283.5" width="345" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="j0H-zR-Hbl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="0.30588235289999999" green="0.39607843139999999" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-oz-Gy7">
                                 <rect key="frame" x="0.0" y="612" width="375" height="55"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -84,13 +101,6 @@
                                     <constraint firstAttribute="height" constant="55" id="Opp-dW-5Wq"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem image="Chat-Small" id="WBj-tl-xec">
-                                        <color key="tintColor" red="1" green="0.89803921568627454" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <segue destination="7fq-qv-RfL" kind="show" id="bU0-cf-8ng"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="07F-XS-9LU"/>
                                     <barButtonItem image="FindFriends-Small" id="9me-93-dfk">
                                         <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -117,9 +127,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="HBY-av-GWJ" firstAttribute="centerX" secondItem="A26-vo-R2o" secondAttribute="centerX" id="Bgy-P8-WMx"/>
+                            <constraint firstAttribute="trailing" secondItem="HBY-av-GWJ" secondAttribute="trailing" constant="15" id="Lgz-2T-Q0g"/>
                             <constraint firstItem="aMp-oc-hQE" firstAttribute="top" secondItem="Zvf-oz-Gy7" secondAttribute="bottom" id="Sgg-07-Itn"/>
                             <constraint firstAttribute="trailing" secondItem="Zvf-oz-Gy7" secondAttribute="trailing" id="Vh7-Om-QMR"/>
                             <constraint firstItem="He8-vf-BSs" firstAttribute="top" secondItem="A26-vo-R2o" secondAttribute="top" id="Yst-EV-nOe"/>
+                            <constraint firstItem="HBY-av-GWJ" firstAttribute="leading" secondItem="A26-vo-R2o" secondAttribute="leading" constant="15" id="h5c-2f-f6H"/>
+                            <constraint firstItem="HBY-av-GWJ" firstAttribute="centerY" secondItem="A26-vo-R2o" secondAttribute="centerY" id="hH5-Ct-BLh"/>
                             <constraint firstItem="He8-vf-BSs" firstAttribute="leading" secondItem="A26-vo-R2o" secondAttribute="leading" id="haS-ui-3mJ"/>
                             <constraint firstItem="Zvf-oz-Gy7" firstAttribute="top" secondItem="He8-vf-BSs" secondAttribute="bottom" id="hjU-es-8XV"/>
                             <constraint firstAttribute="trailing" secondItem="He8-vf-BSs" secondAttribute="trailing" id="oA4-sw-qnO"/>
@@ -134,12 +148,16 @@
                                 <action selector="toMainView:" destination="u62-1t-deD" id="k6D-vk-YGD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="FriendGroup-Small" id="zSb-hJ-SYI">
-                            <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="Chat-Small" id="WBj-tl-xec">
+                            <color key="tintColor" red="1" green="0.89803921568627454" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="7fq-qv-RfL" kind="show" id="bU0-cf-8ng"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="introLabel" destination="HBY-av-GWJ" id="kfl-xv-far"/>
                         <outlet property="tableView" destination="He8-vf-BSs" id="R2v-4b-av7"/>
                     </connections>
                 </viewController>
@@ -170,22 +188,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-8s-31u">
-                                                    <rect key="frame" x="8" y="22" width="184" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zih-jP-PLV">
-                                                    <rect key="frame" x="192" y="17" width="175" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zih-jP-PLV">
+                                                    <rect key="frame" x="217" y="17" width="150" height="30"/>
                                                     <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="dg5-FT-aNU"/>
+                                                        <constraint firstAttribute="height" constant="30" id="qT1-Nq-kOR"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-8s-31u">
+                                                    <rect key="frame" x="19" y="23.5" width="190" height="18.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="190" id="r0V-AC-bdQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.39607843139999999" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tXF-8s-31u" firstAttribute="centerY" secondItem="rEG-uI-FIe" secondAttribute="centerY" id="Hy7-Jn-tDo"/>
+                                                <constraint firstItem="Zih-jP-PLV" firstAttribute="leading" secondItem="tXF-8s-31u" secondAttribute="trailing" constant="8" symbolic="YES" id="e41-W7-NR5"/>
+                                                <constraint firstItem="tXF-8s-31u" firstAttribute="leading" secondItem="rEG-uI-FIe" secondAttribute="leading" constant="19" id="j4h-rG-Wi0"/>
+                                                <constraint firstItem="tXF-8s-31u" firstAttribute="centerY" secondItem="Zih-jP-PLV" secondAttribute="centerY" id="n99-3q-yfG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="usernameLabel" destination="tXF-8s-31u" id="pHn-zc-0Mu"/>
@@ -208,7 +237,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Friends" image="Friends-Small" selectedImage="Friends-Small" id="nmN-Ro-C82"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="92o-MI-EAo"/>
+                    <navigationItem key="navigationItem" title="Friends" id="92o-MI-EAo"/>
                     <connections>
                         <outlet property="tableView" destination="sB0-GQ-My4" id="kVH-ae-LnK"/>
                         <segue destination="1rI-P2-eyq" kind="show" identifier="toChat" id="wjS-S8-MQ8"/>
@@ -230,46 +259,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lo2-5q-xC7">
-                                <rect key="frame" x="23" y="275" width="328" height="39"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFw-fM-2ia">
-                                <rect key="frame" x="23" y="342" width="328" height="99"/>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FillerImage2" translatesAutoresizingMaskIntoConstraints="NO" id="bLQ-V6-NmG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJW-44-TBf">
+                                <rect key="frame" x="23" y="596" width="328" height="51"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutButtonTapped:" destination="aei-Bp-NDZ" eventType="touchUpInside" id="TQW-uy-haa"/>
+                                    <action selector="logoutButtonTapped:" destination="aei-Bp-NDZ" eventType="touchUpInside" id="WFs-OG-mn3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6z-Xj-CTZ">
+                                <rect key="frame" x="23" y="107" width="328" height="39"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="38"/>
+                                <color key="textColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lo2-5q-xC7" firstAttribute="centerX" secondItem="GFw-fM-2ia" secondAttribute="centerX" id="5kR-tw-LWk"/>
-                            <constraint firstItem="Lo2-5q-xC7" firstAttribute="centerX" secondItem="Cvs-kU-e5b" secondAttribute="centerX" id="AJA-r7-ADS"/>
-                            <constraint firstItem="Lo2-5q-xC7" firstAttribute="leading" secondItem="Cvs-kU-e5b" secondAttribute="leadingMargin" constant="7" id="BdJ-OU-QEO"/>
-                            <constraint firstItem="Lo2-5q-xC7" firstAttribute="leading" secondItem="GFw-fM-2ia" secondAttribute="leading" id="eGW-BD-5nA"/>
-                            <constraint firstItem="GFw-fM-2ia" firstAttribute="top" secondItem="Lo2-5q-xC7" secondAttribute="bottom" constant="28" id="gNA-kz-U9P"/>
-                            <constraint firstItem="vcL-Yw-A6B" firstAttribute="top" secondItem="GFw-fM-2ia" secondAttribute="bottom" constant="226" id="sRC-Ro-ZqB"/>
-                            <constraint firstItem="Lo2-5q-xC7" firstAttribute="top" secondItem="ZeO-WR-VPi" secondAttribute="bottom" constant="211" id="tHs-TD-EZ4"/>
+                            <constraint firstItem="H6z-Xj-CTZ" firstAttribute="top" secondItem="ZeO-WR-VPi" secondAttribute="bottom" constant="43" id="0tG-Il-2hd"/>
+                            <constraint firstAttribute="trailing" secondItem="bLQ-V6-NmG" secondAttribute="trailing" id="3nc-zK-CuI"/>
+                            <constraint firstAttribute="bottom" secondItem="cJW-44-TBf" secondAttribute="bottom" constant="20" symbolic="YES" id="5dG-uv-qon"/>
+                            <constraint firstItem="H6z-Xj-CTZ" firstAttribute="centerX" secondItem="cJW-44-TBf" secondAttribute="centerX" id="U3w-bi-LQ5"/>
+                            <constraint firstItem="bLQ-V6-NmG" firstAttribute="leading" secondItem="Cvs-kU-e5b" secondAttribute="leading" id="UJa-X1-Pkx"/>
+                            <constraint firstItem="H6z-Xj-CTZ" firstAttribute="leading" secondItem="Cvs-kU-e5b" secondAttribute="leadingMargin" constant="7" id="V9S-Nx-Df7"/>
+                            <constraint firstItem="cJW-44-TBf" firstAttribute="top" secondItem="H6z-Xj-CTZ" secondAttribute="bottom" constant="450" id="XBQ-Hu-Jfc"/>
+                            <constraint firstAttribute="bottom" secondItem="bLQ-V6-NmG" secondAttribute="bottom" id="g6N-ZQ-aLK"/>
+                            <constraint firstItem="bLQ-V6-NmG" firstAttribute="top" secondItem="ZeO-WR-VPi" secondAttribute="bottom" id="h75-aA-ofv"/>
+                            <constraint firstItem="H6z-Xj-CTZ" firstAttribute="centerX" secondItem="bLQ-V6-NmG" secondAttribute="centerX" id="iLg-3X-sec"/>
+                            <constraint firstItem="bLQ-V6-NmG" firstAttribute="leading" secondItem="Cvs-kU-e5b" secondAttribute="leading" id="jwD-jr-AoR"/>
+                            <constraint firstAttribute="trailing" secondItem="bLQ-V6-NmG" secondAttribute="trailing" id="nO1-Io-w0x"/>
+                            <constraint firstItem="H6z-Xj-CTZ" firstAttribute="leading" secondItem="cJW-44-TBf" secondAttribute="leading" id="xOJ-lk-4gi"/>
+                            <constraint firstItem="bLQ-V6-NmG" firstAttribute="top" secondItem="ZeO-WR-VPi" secondAttribute="bottom" id="zLW-yz-knA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="User-Small" selectedImage="User-Small" id="hqV-Q0-dqG"/>
+                    <navigationItem key="navigationItem" title="Profile" id="oCH-cs-mRo"/>
                     <connections>
-                        <outlet property="logoutButton" destination="GFw-fM-2ia" id="qq8-KL-uIn"/>
-                        <outlet property="usernameLabel" destination="Lo2-5q-xC7" id="N7h-G0-OTZ"/>
+                        <outlet property="logoutButton" destination="cJW-44-TBf" id="ZUK-SM-dC7"/>
+                        <outlet property="usernameLabel" destination="H6z-Xj-CTZ" id="2F4-6Q-nRF"/>
                         <segue destination="Ob9-zb-10i" kind="unwind" identifier="toMain" unwindAction="unwindToMain:" id="dgc-FR-SA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFA-0x-evt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ob9-zb-10i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="1768"/>
+            <point key="canvasLocation" x="2005.5999999999999" y="1767.1664167916044"/>
         </scene>
         <!--Find Friends-->
         <scene sceneID="cFd-4I-iaG">
@@ -298,9 +338,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdI-46-oqE">
-                                                    <rect key="frame" x="20" y="20" width="189" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="20" y="20.5" width="190" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.39607843139999999" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="si3-qH-HjS">
@@ -324,7 +364,7 @@
                                             <constraints>
                                                 <constraint firstItem="HdI-46-oqE" firstAttribute="centerY" secondItem="uZV-T8-50y" secondAttribute="centerY" id="4dR-js-Q3b"/>
                                                 <constraint firstItem="si3-qH-HjS" firstAttribute="trailing" secondItem="uZV-T8-50y" secondAttribute="trailingMargin" id="HLA-I0-uum"/>
-                                                <constraint firstAttribute="trailing" secondItem="HdI-46-oqE" secondAttribute="trailing" constant="166" id="bTj-Dz-wSZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="HdI-46-oqE" secondAttribute="trailing" constant="165" id="bTj-Dz-wSZ"/>
                                                 <constraint firstItem="si3-qH-HjS" firstAttribute="centerY" secondItem="uZV-T8-50y" secondAttribute="centerY" constant="-1" id="kYY-M9-55g"/>
                                                 <constraint firstItem="HdI-46-oqE" firstAttribute="leading" secondItem="uZV-T8-50y" secondAttribute="leading" constant="20" id="vik-Tk-kOp"/>
                                             </constraints>
@@ -350,7 +390,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Friends" image="FindFriends-Small" selectedImage="FindFriends-Small" id="nGe-ot-St4"/>
-                    <navigationItem key="navigationItem" id="h1p-g4-9Kx"/>
+                    <navigationItem key="navigationItem" title="Find Friends" id="h1p-g4-9Kx"/>
                     <connections>
                         <outlet property="tableView" destination="bGv-6V-crF" id="g7M-O1-luL"/>
                     </connections>
@@ -385,8 +425,8 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Username Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="580-St-BLd">
                                                     <rect key="frame" x="15" y="0.0" width="321" height="79.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
+                                                    <color key="textColor" red="0.30588235289999999" green="0.39607843139999999" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -458,8 +498,8 @@
     <resources>
         <image name="Back-Small" width="29" height="29"/>
         <image name="Chat-Small" width="29" height="29"/>
+        <image name="FillerImage2" width="194" height="259"/>
         <image name="FindFriends-Small" width="29" height="29"/>
-        <image name="FriendGroup-Small" width="29" height="29"/>
         <image name="Friends-Small" width="29" height="29"/>
         <image name="Home-Small" width="29" height="29"/>
         <image name="Next-Small" width="29" height="29"/>

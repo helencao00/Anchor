@@ -416,7 +416,7 @@
 				TargetAttributes = {
 					0D8113961F215124008E01A9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6UAPV32MQA;
+						DevelopmentTeam = 2JK55WM6CP;
 						ProvisioningStyle = Automatic;
 					};
 					0D8113AA1F215124008E01A9 = {
@@ -813,10 +813,10 @@
 			baseConfigurationReference = B6C3FE13D0A29120AF095086 /* Pods-Anchor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6UAPV32MQA;
+				DEVELOPMENT_TEAM = 2JK55WM6CP;
 				INFOPLIST_FILE = Anchor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HelenCao.Anchor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelenLuCao05022000.Anchor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
@@ -828,10 +828,10 @@
 			baseConfigurationReference = 3154B53D8B399964B775642B /* Pods-Anchor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6UAPV32MQA;
+				DEVELOPMENT_TEAM = 2JK55WM6CP;
 				INFOPLIST_FILE = Anchor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.HelenCao.Anchor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HelenLuCao05022000.Anchor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
