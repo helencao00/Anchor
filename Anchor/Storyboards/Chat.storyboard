@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="He8-vf-BSs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -78,7 +78,7 @@
                                 </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvf-oz-Gy7">
-                                <rect key="frame" x="0.0" y="568" width="375" height="55"/>
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="Opp-dW-5Wq"/>
@@ -88,6 +88,27 @@
                                         <color key="tintColor" red="1" green="0.89803921568627454" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="7fq-qv-RfL" kind="show" id="bU0-cf-8ng"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="07F-XS-9LU"/>
+                                    <barButtonItem image="FindFriends-Small" id="9me-93-dfk">
+                                        <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="tvh-FO-cSf" kind="show" id="VHB-dM-5GG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sO3-yX-P0Q"/>
+                                    <barButtonItem image="Friends-Small" id="nk5-Hv-6pZ">
+                                        <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="PI5-Ny-P3t" kind="show" id="RYW-Rh-uPK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mte-v9-EyJ"/>
+                                    <barButtonItem image="User-Small" id="LN7-bm-2ng">
+                                        <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="aei-Bp-NDZ" kind="show" id="89h-Hm-aED"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -115,13 +136,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="FriendGroup-Small" id="zSb-hJ-SYI">
                             <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="7Y2-oH-eaZ" kind="show" id="l7s-0U-JOL"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="He8-vf-BSs" id="R2v-4b-av7"/>
                     </connections>
@@ -143,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sB0-GQ-My4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="actualFriend" rowHeight="65" id="iCh-AL-1Ce" customClass="FriendCell" customModule="Anchor" customModuleProvider="target">
@@ -183,7 +200,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="sB0-GQ-My4" secondAttribute="bottom" constant="44" id="Liz-Wh-xtd"/>
+                            <constraint firstAttribute="bottom" secondItem="sB0-GQ-My4" secondAttribute="bottom" id="Liz-Wh-xtd"/>
                             <constraint firstItem="sB0-GQ-My4" firstAttribute="leading" secondItem="r3U-eT-AMW" secondAttribute="leading" id="b9d-Cc-0io"/>
                             <constraint firstItem="sB0-GQ-My4" firstAttribute="top" secondItem="r3U-eT-AMW" secondAttribute="top" id="eku-74-oaa"/>
                             <constraint firstAttribute="trailing" secondItem="sB0-GQ-My4" secondAttribute="trailing" id="jmi-fo-ZjW"/>
@@ -192,7 +209,6 @@
                     <tabBarItem key="tabBarItem" title="Friends" image="Friends-Small" selectedImage="Friends-Small" id="nmN-Ro-C82"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="92o-MI-EAo"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="sB0-GQ-My4" id="kVH-ae-LnK"/>
                         <segue destination="1rI-P2-eyq" kind="show" identifier="toChat" id="wjS-S8-MQ8"/>
@@ -221,7 +237,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFw-fM-2ia">
-                                <rect key="frame" x="23" y="342" width="328" height="50"/>
+                                <rect key="frame" x="23" y="342" width="328" height="99"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <state key="normal" title="Logout">
@@ -253,26 +269,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PFA-0x-evt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ob9-zb-10i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2488.8000000000002" y="2383.3583208395803"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="h5Q-i9-RcM">
-            <objects>
-                <tabBarController id="7Y2-oH-eaZ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="mxd-5Y-01W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="tvh-FO-cSf" kind="relationship" relationship="viewControllers" id="qSO-OJ-epq"/>
-                        <segue destination="PI5-Ny-P3t" kind="relationship" relationship="viewControllers" id="nAg-YB-gg1"/>
-                        <segue destination="aei-Bp-NDZ" kind="relationship" relationship="viewControllers" id="ZM1-nv-YcJ"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hlG-E8-sWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1686" y="1727"/>
+            <point key="canvasLocation" x="2007" y="1768"/>
         </scene>
         <!--Find Friends-->
         <scene sceneID="cFd-4I-iaG">
@@ -287,10 +284,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bGv-6V-crF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="618" id="Ki6-Lb-6rP"/>
+                                    <constraint firstAttribute="height" constant="667" id="Ki6-Lb-6rP"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friend" rowHeight="60" id="s3D-gf-mFD" customClass="FindFriendsCell" customModule="Anchor" customModuleProvider="target">
@@ -349,7 +346,7 @@
                             <constraint firstItem="bGv-6V-crF" firstAttribute="leading" secondItem="fYc-p8-1CS" secondAttribute="leading" id="5Yy-cV-uJp"/>
                             <constraint firstItem="bGv-6V-crF" firstAttribute="top" secondItem="fYc-p8-1CS" secondAttribute="top" id="ATc-Yg-YII"/>
                             <constraint firstAttribute="trailing" secondItem="bGv-6V-crF" secondAttribute="trailing" id="bAL-bE-7dM"/>
-                            <constraint firstAttribute="bottom" secondItem="bGv-6V-crF" secondAttribute="bottom" constant="49" id="bdg-rO-0YR"/>
+                            <constraint firstAttribute="bottom" secondItem="bGv-6V-crF" secondAttribute="bottom" id="bdg-rO-0YR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Friends" image="FindFriends-Small" selectedImage="FindFriends-Small" id="nGe-ot-St4"/>
@@ -360,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e62-zm-DIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424.80000000000001" y="1510.7946026986508"/>
+            <point key="canvasLocation" x="1341.5999999999999" y="1507.1964017991006"/>
         </scene>
         <!--New Message-->
         <scene sceneID="tbG-qL-b3h">
@@ -375,7 +372,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MoL-zT-dqB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="newChat" textLabel="580-St-BLd" rowHeight="80" style="IBUITableViewCellStyleDefault" id="9p2-Km-MRr" customClass="NewChatUserCell" customModule="Anchor" customModuleProvider="target">
@@ -469,6 +466,6 @@
         <image name="User-Small" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wjS-S8-MQ8"/>
+        <segue reference="9Ry-dD-lQF"/>
     </inferredMetricsTieBreakers>
 </document>

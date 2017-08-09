@@ -13,7 +13,7 @@
         <!--Anchor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="2071.1999999999998" y="-22.03898050974513"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ceb-zw-YH3">
@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8O-Lx-AKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2952.8000000000002" y="318.89055472263868"/>
+            <point key="canvasLocation" x="3892" y="318.89055472263868"/>
         </scene>
         <!--GenerateQR Code View Controller-->
         <scene sceneID="ivP-A7-Fke">
@@ -162,7 +162,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FNN-gm-oU8">
-                                <rect key="frame" x="15" y="308" width="345" height="50"/>
+                                <rect key="frame" x="15" y="308.5" width="345" height="50"/>
                                 <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="k9i-YW-qvq"/>
@@ -172,7 +172,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tao-Lh-his">
-                                <rect key="frame" x="37" y="388" width="300" height="80"/>
+                                <rect key="frame" x="37" y="388.5" width="300" height="80"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="VFn-Mh-Tnd"/>
@@ -187,7 +187,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-nu-ukg">
-                                <rect key="frame" x="87" y="88" width="200" height="200"/>
+                                <rect key="frame" x="87" y="88.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Bi4-e4-OiY"/>
                                 </constraints>
@@ -205,6 +205,7 @@
                             <constraint firstItem="9NW-nu-ukg" firstAttribute="leading" secondItem="PdJ-2k-T1X" secondAttribute="leadingMargin" constant="71" id="yNj-YQ-J5O"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8Wv-dT-2SI">
                         <barButtonItem key="rightBarButtonItem" image="Save-Small" id="SK7-Xi-PuN">
@@ -214,7 +215,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="QRCodeImageView" destination="9NW-nu-ukg" id="bbq-B9-Dj1"/>
                         <outlet property="generateButton" destination="Tao-Lh-his" id="fDp-nY-wik"/>
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-fe-puh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="241.52923538230885"/>
+            <point key="canvasLocation" x="4759.1999999999998" y="241.52923538230885"/>
         </scene>
         <!--To Text View Controller-->
         <scene sceneID="2TG-PS-IWE">
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Skk-9c-Mmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3796" y="936.88155922038993"/>
+            <point key="canvasLocation" x="3534" y="1197"/>
         </scene>
         <!--Text Scanner View Controller-->
         <scene sceneID="m2f-tI-gPE">
@@ -409,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opv-aP-59Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4703.1999999999998" y="671.51424287856082"/>
+            <point key="canvasLocation" x="5494" y="624"/>
         </scene>
         <!--Scanner Camera-->
         <scene sceneID="RaW-dr-9cA">
@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6Y-Zi-Vig" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826.4000000000001" y="-422.33883058470769"/>
+            <point key="canvasLocation" x="3765.5999999999999" y="-422.33883058470769"/>
         </scene>
         <!--Safari View Controller-->
         <scene sceneID="VRJ-pr-NDc">
@@ -450,12 +450,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15W-0S-R3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3764" y="-422.33883058470769"/>
+            <point key="canvasLocation" x="4703.1999999999998" y="-422.33883058470769"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Find Friends-->
         <scene sceneID="aWi-rD-AQl">
             <objects>
                 <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Find Friends" image="FindFriends-Small" id="Rx8-Ro-IDP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QIq-95-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -468,7 +469,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Nz-AV-Hjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.80000000000001" y="-22.03898050974513"/>
+            <point key="canvasLocation" x="1132" y="-22.03898050974513"/>
         </scene>
         <!--login-->
         <scene sceneID="NZ2-Fk-xOd">
@@ -488,6 +489,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FindFriends-Small" width="29" height="29"/>
         <image name="Save-Small" width="29" height="29"/>
     </resources>
 </document>
