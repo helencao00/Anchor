@@ -32,8 +32,8 @@ class ProfileViewController: UIViewController {
         
         authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
             guard user == nil else { return }
-            print(self.view.window?.rootViewController?.childViewControllers)
-            print(self.view.window?.rootViewController?.childViewControllers.count)
+//            print(self.view.window?.rootViewController?.childViewControllers)
+//            print(self.view.window?.rootViewController?.childViewControllers.count)
             
             self.performSegue(withIdentifier: "toMain", sender: self)
 

@@ -39,7 +39,7 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
                                 if UIApplication.shared.canOpenURL(ScannerCamera.urll!){
                                     let safariVC = SFSafariViewController(url: ScannerCamera.urll!)
                                     
-                                    safariVC.delegate = self as! SFSafariViewControllerDelegate
+                                    safariVC.delegate = self as SFSafariViewControllerDelegate
                                     self.present(safariVC, animated: true, completion: nil)
                                 }
                                 }else{

@@ -161,7 +161,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="FNN-gm-oU8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FNN-gm-oU8">
                                 <rect key="frame" x="15" y="308" width="345" height="50"/>
                                 <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -207,15 +207,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="8Wv-dT-2SI">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="goB-u1-jB9">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbH-xD-TqJ">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save:" destination="MR0-o5-2d8" eventType="touchUpInside" id="PqY-oq-wqQ"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="Save-Small" id="SK7-Xi-PuN">
+                            <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="save:" destination="MR0-o5-2d8" id="mQT-6w-Jgc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -461,7 +457,7 @@
             <objects>
                 <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QIq-95-pMF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QIq-95-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -491,4 +487,7 @@
             <point key="canvasLocation" x="426" y="785"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Save-Small" width="29" height="29"/>
+    </resources>
 </document>

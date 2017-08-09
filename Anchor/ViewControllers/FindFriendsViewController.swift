@@ -150,7 +150,9 @@ extension FindFriendsViewController: UITableViewDelegate{
     //            self.tableView.reloadRows(at: [indexPath], with: .none)
     //        }
     //    }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 73
+    }
 }
 
 extension FindFriendsViewController: UITableViewDataSource{

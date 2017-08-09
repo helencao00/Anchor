@@ -18,19 +18,20 @@ class ChatListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       
-    
+//        tableView.backgroundView = nil
+//        tableView.backgroundView = view
+        
+        self.tableView.backgroundColor = UIColor(red: 255, green: 229, blue: 182, alpha: 1)
 //        tableView.transform = CGAffineTransform(scaleX: -1,y: 1)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         userChatsHandle = UserService.observeChats { [weak self] (ref, chats) in
             self?.userChatsRef = ref
             self?.chats = chats
             self?.chats.sort(by: {$0.lastMessageSent!.compare($1.lastMessageSent! as Date) == ComparisonResult.orderedDescending})
-
+            print(chats)
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -38,7 +39,8 @@ class ChatListViewController: UIViewController {
 //        tableView.reloadData()
     }
     
-    deinit {
+    override func viewDidDisappear(_ animated: Bool) {
+        
         // 4
         userChatsRef?.removeObserver(withHandle: userChatsHandle)
     }
@@ -81,9 +83,11 @@ extension ChatListViewController: UITableViewDataSource{
         cell.usernameLabel.text = chat.title
         cell.lastMessageLabel.text = chat.lastMessage
         
-//        let formatter = DateFormatter()
+        let formatter = DateFormatter()
 //        // initially set the format based on your datepicker date
-//        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "E, MMM d yyyy hh:mm"
+        
+        
         
         // let myString = formatter.string(from: Date())
         // convert your string to date
@@ -108,12 +112,16 @@ extension ChatListViewController: UITableViewDataSource{
 //        let outString = outFormatter.string(from: inDate!)
 //        print(outString)
 //        print(myStringafd)
-        cell.dateLabel.text = chat.lastMessageSent?.convertToString()
+        let dateString = formatter.string(from: chat.lastMessageSent!)
+        print(dateString)
+        cell.dateLabel.text = dateString
 //        cell.timeLabel.text = outString
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+         cell.contentView.backgroundColor = UIColor(red: 255, green: 229, blue: 182, alpha: 1)
+    }
 
 }
 

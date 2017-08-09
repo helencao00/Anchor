@@ -13,7 +13,7 @@ import JSQSystemSoundPlayer
 
 struct ChatService{
     static func create(from message: Message, with chat: Chat, completion: @escaping (Chat?) -> Void) {
- 
+        
         var membersDict = [String : Bool]()
         for uid in chat.memberUIDs {
             membersDict[uid] = true
@@ -25,28 +25,28 @@ struct ChatService{
         let lastMessageSent = message.timestamp.timeIntervalSince1970
         chat.lastMessageSent = message.timestamp
         
-    
+        
         let chatDict: [String : Any] = ["title" : chat.title,
                                         "memberHash" : chat.memberHash,
                                         "members" : membersDict,
                                         "lastMessage" : lastMessage,
                                         "lastMessageSent" : lastMessageSent]
         
-
+        
         let chatRef = Database.database().reference().child("chats").child(User.current.uid).childByAutoId()
         chat.key = chatRef.key
-     
+        
         var multiUpdateValue = [String : Any]()
-    
+        
         for uid in chat.memberUIDs {
             multiUpdateValue["chats/\(uid)/\(chatRef.key)"] = chatDict
         }
         
-    
+        
         let messagesRef = Database.database().reference().child("messages").child(chatRef.key).childByAutoId()
         let messageKey = messagesRef.key
         
-       
+        
         multiUpdateValue["messages/\(chatRef.key)/\(messageKey)"] = message.dictValue
         let rootRef = Database.database().reference()
         rootRef.updateChildValues(multiUpdateValue) { (error, ref) in
@@ -65,7 +65,7 @@ struct ChatService{
             membersDict[uid] = true
         }
         
-//        let lastMessage = "\(message.sender.username): \(message.downloadURl!)"
+        //        let lastMessage = "\(message.sender.username): \(message.downloadURl!)"
         let lastMessage = "Image"
         chat.lastMessage = lastMessage
         let lastMessageSent = message.timestamp.timeIntervalSince1970
@@ -105,7 +105,7 @@ struct ChatService{
         }
     }
     
-
+    
     
     static func sendImageMessage(_ message: PhotoMessage, for chat: Chat, success: ((Bool)->Void)? = nil){
         guard let chatKey = chat.key else{
@@ -148,7 +148,9 @@ struct ChatService{
         for uid in chat.memberUIDs{
             let lastMesage = "\(message.sender.username): \(message.content)"
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessage"] = lastMesage
-            multipleUpdateValue["chats/\(uid)\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
+            print(message.timestamp.timeIntervalSince1970)
+            print(chatKey)
+            multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
         }
         let messagesRef = Database.database().reference().child("messages").child(chatKey).childByAutoId()
         let messageKey = messagesRef.key

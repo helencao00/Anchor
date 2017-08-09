@@ -48,8 +48,7 @@ class FriendsViewController: UIViewController {
         
         UserService.usersExcludingCurrentUser { [unowned self] (users) in
             self.users = users
-            let count = users.count
-            print("Users count: \(count)")
+           
             self.friends.removeAll()
             if self.friends.isEmpty{
                 var friendsCount = 0
@@ -160,16 +159,10 @@ class FriendsViewController: UIViewController {
 
 extension FriendsViewController: UITableViewDelegate{
   
- 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 73
+    }
 }
-/*
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //let cell = tableView.cellForRow(at: indexPath) as! FriendCell
-    selectedUser = friends[indexPath.row]
-    tableView.reloadData()
-    
-}
-*/
 
 extension FriendsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -181,6 +174,8 @@ extension FriendsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "actualFriend", for: indexPath) as! FriendCell
         
+//        selectedUser = friends[indexPath.row]
+
         var friend: User
         if searchController.isActive && searchController.searchBar.text != ""{
             
@@ -192,7 +187,7 @@ extension FriendsViewController: UITableViewDataSource{
         
         cell.usernameLabel?.text = friend.username
         //cell.selectionStyle = .none
-        selectedUser = friends[indexPath.row]
+   
 
         cell.completionHandler = { [weak self] (cell) in
             guard let selectedUser = self?.selectedUser else { return }
@@ -209,9 +204,28 @@ extension FriendsViewController: UITableViewDataSource{
         return cell
     }
     
-  
-   
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedUser = friends[indexPath.row]
+       
+        
+//        ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+//            
+//            self.existingChat = chat
+//            
+//        }
+        
+        guard let selectedUser = self.selectedUser else { return }
+        
+        ChatService.checkForExistingChat(with: selectedUser) { (chat) in
+            
+            self.existingChat = chat
+            
+            self.performSegue(withIdentifier: "toChat", sender: self)
+            
+        }
+        
+        
+    }
 }
 
 

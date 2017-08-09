@@ -41,10 +41,11 @@ class Chat {
     init(members: [User]){
 
         assert(members.count == 2, "There must be two members in a chat.")
-
-        self.title = members.reduce("") { (acc, cur) -> String in
-            return acc.isEmpty ? cur.username : "\(acc), \(cur.username)"
-        }
+        let memberString = members[0].username
+        self.title = memberString
+//        members.reduce("") { (acc, cur) -> String in
+//            return acc.isEmpty ? cur.username : "\(acc), \(cur.username)"
+//        }
         
         self.memberHash = Chat.hash(forMembers: members)
         
