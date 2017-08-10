@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Anchor-->
+        <!--AnchorQR-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Main" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                             <constraint firstItem="3D7-Yv-UT4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uiG-fV-muI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Anchor" id="3I8-Hg-4nn"/>
+                    <navigationItem key="navigationItem" title="AnchorQR" id="3I8-Hg-4nn"/>
                     <connections>
                         <outlet property="chatButton" destination="rAz-bZ-RGz" id="hBv-es-MAr"/>
                         <outlet property="convertButton" destination="ahh-SG-QF4" id="M38-KF-R4c"/>
@@ -482,7 +482,7 @@
                 <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Friends" image="FindFriends-Small" id="Rx8-Ro-IDP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QIq-95-pMF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QIq-95-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
