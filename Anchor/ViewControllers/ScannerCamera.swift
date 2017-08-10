@@ -21,6 +21,25 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         
         scanner = MTBBarcodeScanner(previewView: previewView)
+//        let overlayPath = UIBezierPath(rect: self.view.bounds)
+//        self.view.layoutIfNeeded()
+//        let x = 32
+//        let y = 32
+//        let rect = CGRect(
+//            origin: CGPoint(x: x, y: y),
+//            size: CGSize(dictionaryRepresentation: self.view.frame.size.width * 80 * 0.01)
+////            UIScreen.main.bounds.size
+//        )
+////        let overlayWidth = self.view.frame.size.width * 80 * 0.01
+//        let transparentPath = UIBezierPath.init(rect: rect)
+//        overlayPath.append(transparentPath)
+//        overlayPath.usesEvenOddFillRule = true
+//        let fillLayer = CAShapeLayer.init(layer: transparentPath)
+//        fillLayer.path = overlayPath.cgPath
+//        fillLayer.fillRule = kCAFillRuleEvenOdd
+//        fillLayer.fillColor = UIColor(red: 0.0 / 255.0, green: 0.0 / 255.0, blue: 0.0 / 255.0, alpha: 0.8).cgColor
+//        self.previewView.layer.addSublayer(fillLayer)
+//
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +72,7 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
                     NSLog("Unable to start scanning")
                 }
             } else {
-                let alertController = UIAlertController(title: "Hey AppCoda", message: "What do you want to do?", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "Permission is needed to perform function", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)

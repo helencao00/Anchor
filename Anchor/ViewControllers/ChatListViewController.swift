@@ -70,6 +70,10 @@ class ChatListViewController: UIViewController {
         self.navigationController!.popToRootViewController(animated: true)
         
     }
+    
+    @IBAction func unwindToChatList(_ segue: UIStoryboardSegue) {
+    print("Abid gets 60% of my app")
+    }
 
     /*
     // MARK: - Navigation
@@ -142,7 +146,10 @@ extension ChatListViewController: UITableViewDataSource{
 }
 
 extension ChatListViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+        
+    }
 }
 
 extension ChatListViewController {

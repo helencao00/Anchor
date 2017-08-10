@@ -42,8 +42,11 @@ class ChatViewController: JSQMessagesViewController {
     var messagesRef: DatabaseReference?
     
     @IBAction func toMainChat(_ sender: UIBarButtonItem) {
-        let chatListViewController = self.navigationController?.viewControllers[1] as! ChatListViewController
-        self.navigationController?.popToViewController(chatListViewController, animated: true)
+//        print(self.navigationController?.viewControllers)
+//        let chatListViewController = self.navigationController?.viewControllers[1] as! ChatListViewController
+//        let chatList = ChatListViewController as UIViewController
+//        self.navigationController?.popToViewController(chatListViewController, animated: true)
+        self.performSegue(withIdentifier: "toChatList", sender: self)
     }
    // MARK: - VC Lifecycle
     

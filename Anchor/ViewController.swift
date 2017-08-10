@@ -12,10 +12,15 @@ import Firebase
 class ViewController: UIViewController {
     @IBOutlet weak var chatButton: UIButton!
 
+    @IBOutlet weak var convertButton: UIButton!
+    @IBOutlet weak var scanButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "Anchor"
+        changeShape(button: chatButton)
+        changeShape(button: scanButton)
+        changeShape(button: convertButton)
         
     }
     @IBAction func unwindToMain(_ segue: UIStoryboardSegue) {
@@ -30,9 +35,16 @@ class ViewController: UIViewController {
         configureInitialRootViewController(for: self.view.window)
     }
     
+    func changeShape(button: UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 10.0
+        button.clipsToBounds = true
+        
+    }
+    
     func configureInitialRootViewController(for window: UIWindow?) {
         let defaults = UserDefaults.standard
-        let initialViewController: UIViewController
+//        let initialViewController: UIViewController
         
         if Auth.auth().currentUser != nil,
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,

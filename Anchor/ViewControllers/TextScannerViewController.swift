@@ -43,7 +43,7 @@ class TextScannerViewController: UIViewController, SFSafariViewControllerDelegat
                     NSLog("Unable to start scanning")
                 }
             } else {
-                let alertController = UIAlertController(title: "Hey AppCoda", message: "What do you want to do?", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "Permission is needed to perform function", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alertController.addAction(defaultAction)

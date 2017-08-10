@@ -22,6 +22,7 @@
 		0D3898CA1F2804D400F0CDBB /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3898C91F2804D400F0CDBB /* ChatListViewController.swift */; };
 		0D38E7A51F30FC28005002D0 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38E7A41F30FC28005002D0 /* FriendsViewController.swift */; };
 		0D38E7A71F30FCE1005002D0 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D38E7A61F30FCE1005002D0 /* FriendCell.swift */; };
+		0D7FE5671F3CC7F90021E1BE /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FE5661F3CC7F90021E1BE /* OptionsViewController.swift */; };
 		0D81139B1F215124008E01A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139A1F215124008E01A9 /* AppDelegate.swift */; };
 		0D81139D1F215124008E01A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81139C1F215124008E01A9 /* ViewController.swift */; };
 		0D8113A01F215124008E01A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D81139E1F215124008E01A9 /* Main.storyboard */; };
@@ -89,6 +90,7 @@
 		0D3898C91F2804D400F0CDBB /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatListViewController.swift; path = ViewControllers/ChatListViewController.swift; sourceTree = "<group>"; };
 		0D38E7A41F30FC28005002D0 /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = ViewControllers/FriendsViewController.swift; sourceTree = "<group>"; };
 		0D38E7A61F30FCE1005002D0 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendCell.swift; path = Views/FriendCell.swift; sourceTree = "<group>"; };
+		0D7FE5661F3CC7F90021E1BE /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsViewController.swift; path = ViewControllers/OptionsViewController.swift; sourceTree = "<group>"; };
 		0D8113971F215124008E01A9 /* Anchor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anchor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D81139A1F215124008E01A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D81139C1F215124008E01A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				0D81139C1F215124008E01A9 /* ViewController.swift */,
+				0D7FE5661F3CC7F90021E1BE /* OptionsViewController.swift */,
 				0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */,
 				0D8113CF1F22748E008E01A9 /* SafariViewController.swift */,
 				0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */,
@@ -647,6 +650,7 @@
 				0DD021311F2A5B6F00920F19 /* FriendService.swift in Sources */,
 				0DB27D7B1F32849200440BE9 /* FirebaseHelper.swift in Sources */,
 				0DD021331F2A5D5800920F19 /* FindFriendsViewController.swift in Sources */,
+				0D7FE5671F3CC7F90021E1BE /* OptionsViewController.swift in Sources */,
 				0D3898A21F26666800F0CDBB /* Barcode.swift in Sources */,
 				0D38E7A51F30FC28005002D0 /* FriendsViewController.swift in Sources */,
 				0D3898AA1F26956200F0CDBB /* MGPhotoHelper.swift in Sources */,

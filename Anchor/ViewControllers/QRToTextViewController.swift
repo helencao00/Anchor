@@ -13,9 +13,11 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
     var selectedImage: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var choosePhotoButton: UIButton!
     @IBOutlet weak var translateButton: UIButton!
     // MARK: - Properties
     
+    @IBOutlet weak var scanButton: UIButton!
     let picker = UIImagePickerController()
     
     
@@ -29,12 +31,22 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         picker.delegate = self
         translateButton.isHidden = true
+        changeShape(button: choosePhotoButton)
+        changeShape(button: scanButton)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func changeShape(button: UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 10.0
+        button.clipsToBounds = true
+        
+    }
+
     
     @IBAction func choosePhotoButtonTapped(_ sender: UIButton) {
         picker.allowsEditing = false
@@ -63,6 +75,7 @@ class QRToTextViewController:  UIViewController, UIImagePickerControllerDelegate
         imageView.contentMode = .scaleAspectFit //3
         imageView.image = chosenImage //4
         self.selectedImage = chosenImage
+        imageView.backgroundColor = UIColor(white: 0, alpha: 0)
         dismiss(animated:true, completion: nil) //5
         if selectedImage != nil{
             translateButton.isHidden = false

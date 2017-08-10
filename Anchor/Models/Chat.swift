@@ -41,7 +41,14 @@ class Chat {
     init(members: [User]){
 
         assert(members.count == 2, "There must be two members in a chat.")
-        let memberString = members[0].username
+        let memberString = "\(members[1].username) & \(members[0].username)"
+        
+//        if members[0].username == User.current.username{
+//            memberString = members[1].username
+//        } else{
+//            memberString = members[0].username
+//        }
+        
         self.title = memberString
 //        members.reduce("") { (acc, cur) -> String in
 //            return acc.isEmpty ? cur.username : "\(acc), \(cur.username)"

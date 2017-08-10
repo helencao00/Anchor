@@ -81,6 +81,8 @@
                     <navigationItem key="navigationItem" title="Anchor" id="3I8-Hg-4nn"/>
                     <connections>
                         <outlet property="chatButton" destination="rAz-bZ-RGz" id="hBv-es-MAr"/>
+                        <outlet property="convertButton" destination="ahh-SG-QF4" id="M38-KF-R4c"/>
+                        <outlet property="scanButton" destination="QKL-zS-yb0" id="Auf-PV-Bwp"/>
                         <segue destination="T4u-H9-saM" kind="show" identifier="toLogin" id="hBn-kj-WZJ"/>
                         <segue destination="e26-dL-ZL8" kind="show" identifier="toChat" id="hTN-sp-c48"/>
                     </connections>
@@ -89,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="2071.1999999999998" y="-22.03898050974513"/>
         </scene>
-        <!--View Controller-->
+        <!--Options View Controller-->
         <scene sceneID="ceb-zw-YH3">
             <objects>
-                <viewController id="ptr-Bh-y8w" sceneMemberID="viewController">
+                <viewController id="ptr-Bh-y8w" customClass="OptionsViewController" customModule="Anchor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gTh-jl-IKm"/>
                         <viewControllerLayoutGuide type="bottom" id="Zsh-3e-3u8"/>
@@ -144,6 +146,10 @@
                             <constraint firstItem="e2A-er-Lep" firstAttribute="centerX" secondItem="zcX-NU-ewJ" secondAttribute="centerX" id="KwG-DR-Wpj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="generateButton" destination="c8e-Gb-5ez" id="n2B-f8-9uW"/>
+                        <outlet property="translateButton" destination="pd1-KR-m2K" id="RtF-ms-t1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8O-Lx-AKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,9 +192,10 @@
                                     <action selector="generateButtonTapped:" destination="MR0-o5-2d8" eventType="touchUpInside" id="HH2-aw-X6C"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-nu-ukg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NW-nu-ukg">
                                 <rect key="frame" x="87" y="88.5" width="200" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="75P-4W-etU"/>
                                     <constraint firstAttribute="height" constant="200" id="Bi4-e4-OiY"/>
                                 </constraints>
                             </imageView>
@@ -237,53 +244,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-7J-H1j">
-                                <rect key="frame" x="37" y="417" width="300" height="210"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Nss-VT-HpI">
+                                <rect key="frame" x="37" y="114" width="300" height="490"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scs-uE-t0c">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
-                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-WU-q4p">
+                                        <rect key="frame" x="30" y="0.0" width="240" height="240"/>
+                                        <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="ams-JJ-wLC"/>
+                                            <constraint firstAttribute="height" constant="240" id="1mH-Wz-RfL"/>
+                                            <constraint firstAttribute="width" constant="240" id="tIe-HH-kZA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
-                                        <state key="normal" title="Choose Photo">
-                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="choosePhotoButtonTapped:" destination="S0z-5G-0vc" eventType="touchUpInside" id="por-sV-xsl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-Ib-zqq">
-                                        <rect key="frame" x="0.0" y="130" width="300" height="80"/>
-                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-7J-H1j">
+                                        <rect key="frame" x="0.0" y="280" width="300" height="210"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="59L-2j-Z86">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scs-uE-t0c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="ams-JJ-wLC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
+                                                        <state key="normal" title="Choose Photo">
+                                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="choosePhotoButtonTapped:" destination="S0z-5G-0vc" eventType="touchUpInside" id="por-sV-xsl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-Ib-zqq">
+                                                        <rect key="frame" x="0.0" y="130" width="300" height="80"/>
+                                                        <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="gd9-dk-ODE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
+                                                        <state key="normal" title="Scan for Text">
+                                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="KHf-8E-JKJ" kind="show" id="kc6-ZQ-Qbe"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="gd9-dk-ODE"/>
+                                            <constraint firstAttribute="width" constant="300" id="ssT-ov-HzW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
-                                        <state key="normal" title="Scan for Text">
-                                            <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="KHf-8E-JKJ" kind="show" id="kc6-ZQ-Qbe"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="ssT-ov-HzW"/>
-                                </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8NQ-WU-q4p">
-                                <rect key="frame" x="67" y="123" width="240" height="240"/>
-                                <color key="backgroundColor" red="0.68627450980000004" green="0.76862745099999996" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="1mH-Wz-RfL"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-K3-enF">
-                                <rect key="frame" x="67" y="218" width="240" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVL-K3-enF">
+                                <rect key="frame" x="67" y="211.5" width="240" height="45"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="LNw-E2-zPC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="19"/>
                                 <state key="normal" title="Translate">
                                     <color key="titleColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -295,15 +315,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="centerX" secondItem="BXz-7J-H1j" secondAttribute="centerX" id="3aD-2e-3qD"/>
-                            <constraint firstItem="BXz-7J-H1j" firstAttribute="centerX" secondItem="EbB-2k-7oS" secondAttribute="centerX" id="TF9-5B-2mz"/>
-                            <constraint firstItem="8cO-yj-Rs8" firstAttribute="top" secondItem="BXz-7J-H1j" secondAttribute="bottom" constant="40" id="Z7I-cw-k2w"/>
-                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="top" secondItem="Sun-Yr-cd2" secondAttribute="bottom" constant="59" id="aa2-gW-Cit"/>
-                            <constraint firstItem="8NQ-WU-q4p" firstAttribute="leading" secondItem="EbB-2k-7oS" secondAttribute="leadingMargin" constant="51" id="hJa-H5-6AF"/>
+                            <constraint firstItem="vVL-K3-enF" firstAttribute="centerY" secondItem="8NQ-WU-q4p" secondAttribute="centerY" id="PYa-Cp-l44"/>
+                            <constraint firstItem="vVL-K3-enF" firstAttribute="centerX" secondItem="8NQ-WU-q4p" secondAttribute="centerX" id="YsN-9E-zY3"/>
+                            <constraint firstItem="vVL-K3-enF" firstAttribute="centerX" secondItem="Nss-VT-HpI" secondAttribute="centerX" id="a5f-XM-PIM"/>
+                            <constraint firstItem="vVL-K3-enF" firstAttribute="centerX" secondItem="EbB-2k-7oS" secondAttribute="centerX" id="br2-3v-9pe"/>
+                            <constraint firstItem="Nss-VT-HpI" firstAttribute="top" secondItem="Sun-Yr-cd2" secondAttribute="bottom" constant="50" id="e1Z-o0-YZ6"/>
+                            <constraint firstItem="vVL-K3-enF" firstAttribute="leading" secondItem="EbB-2k-7oS" secondAttribute="leadingMargin" constant="51" id="oWt-So-4ll"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="choosePhotoButton" destination="scs-uE-t0c" id="vxc-fP-KPQ"/>
                         <outlet property="imageView" destination="8NQ-WU-q4p" id="9MO-J6-Jfg"/>
+                        <outlet property="scanButton" destination="Iba-Ib-zqq" id="BLr-rb-AGW"/>
                         <outlet property="translateButton" destination="vVL-K3-enF" id="bsK-5k-jBp"/>
                     </connections>
                 </viewController>
@@ -386,9 +409,10 @@
                                 <color key="textColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isf-yP-ugd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="isf-yP-ugd">
                                 <rect key="frame" x="67" y="94" width="240" height="240"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7uh-Bz-hJw"/>
                                     <constraint firstAttribute="height" constant="240" id="TbT-5M-kdt"/>
                                 </constraints>
                             </imageView>
@@ -458,7 +482,7 @@
                 <navigationController storyboardIdentifier="mainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hE5-sk-zmi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find Friends" image="FindFriends-Small" id="Rx8-Ro-IDP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QIq-95-pMF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QIq-95-pMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

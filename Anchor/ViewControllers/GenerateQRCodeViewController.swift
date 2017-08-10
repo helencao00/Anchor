@@ -19,6 +19,7 @@ class GenerateQRCodeViewController: UIViewController {
         super.viewDidLoad()
         userInputTextField.delegate = self
         // Do any additional setup after loading the view.
+        changeShape(button: generateButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,7 +38,13 @@ class GenerateQRCodeViewController: UIViewController {
 //       
 //        
 //    }
-    
+    func changeShape(button: UIButton) {
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 10.0
+        button.clipsToBounds = true
+        
+    }
+
     @IBAction func generateButtonTapped(_ sender: UIButton) {
         if let text = userInputTextField.text{
             let realString = text.trimmingCharacters(in: CharacterSet.whitespaces)
