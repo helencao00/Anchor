@@ -52,7 +52,7 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
                         if let codes = codes {
                             for code in codes {
                                 let stringValue = code.stringValue!
-                                print("Found code: \(stringValue)")
+                              
                                 ScannerCamera.urll = URL(string: stringValue)
                                 if ScannerCamera.urll != nil{
                                 if UIApplication.shared.canOpenURL(ScannerCamera.urll!){
@@ -61,8 +61,6 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
                                     safariVC.delegate = self as SFSafariViewControllerDelegate
                                     self.present(safariVC, animated: true, completion: nil)
                                 }
-                                }else{
-                                    print("frick")
                                 }
 
                             }

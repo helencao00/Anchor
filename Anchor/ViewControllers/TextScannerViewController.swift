@@ -33,7 +33,7 @@ class TextScannerViewController: UIViewController, SFSafariViewControllerDelegat
                         if let codes = codes {
                             for code in codes {
                                 let stringValue = code.stringValue!
-                                print("Found code: \(stringValue)")
+                                
                                 TextScannerViewController.stringValuee = stringValue
                                 self.performSegue(withIdentifier: "toScannedText", sender: self)
                             }

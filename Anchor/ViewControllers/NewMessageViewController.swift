@@ -39,7 +39,7 @@ class NewMessageViewController: UIViewController {
             
             var notfriendsCount = 0
             if !self.followers.isEmpty{
-                print("Already here")
+//                print("Already here")
             }else{
                 
                 
@@ -52,11 +52,11 @@ class NewMessageViewController: UIViewController {
                         notfriendsCount += 1
                         
                     }
-                    print("friends count from viewDidLoad \(notfriendsCount)", self.followers.count )
+//                    print("friends count from viewDidLoad \(notfriendsCount)", self.followers.count )
                     
                     if users.count - notfriendsCount == self.followers.count {
                         DispatchQueue.main.async {
-                            print(self.followers)
+//                            print(self.followers)
                             self.tableView.reloadData()
                         }
                     }
@@ -128,7 +128,7 @@ class NewMessageViewController: UIViewController {
 }
 extension NewMessageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRows followers count: \(followers.count)")
+//        print("numberOfRows followers count: \(followers.count)")
         return (followers.count)
     }
     
@@ -144,7 +144,7 @@ extension NewMessageViewController: UITableViewDataSource {
         cell.newUsernameLabel?.text = follower.username
         
         if let selectedUser = selectedUser, selectedUser.uid == follower.uid {
-            print(selectedUser)
+//            print(selectedUser)
             cell.accessoryType = .checkmark
             nextButton.isEnabled = true
         } else {

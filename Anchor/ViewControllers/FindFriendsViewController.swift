@@ -48,7 +48,7 @@ class FindFriendsViewController: UIViewController {
         UserService.usersExcludingCurrentUser { [unowned self] (users) in
             self.users = users
             let count = users.count
-            print("Users count: \(count)")
+        
             
             var friendsCount = 0
             for usern in users{

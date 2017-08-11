@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Anchor/ViewController.swift"
-            timestampString = "524076947.636987"
+            timestampString = "524180492.477524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "configureInitialRootViewController(for:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Anchor/ViewController.swift"
-            timestampString = "524076947.636987"
+            timestampString = "524180492.477524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "chatButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -217,70 +217,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Anchor/ViewControllers/LoginViewController.swift"
-            timestampString = "523817279.869262"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "authUI(_:didSignInWith:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/ViewControllers/LoginViewController.swift"
-            timestampString = "523817279.869262"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "authUI(_:didSignInWith:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/ViewControllers/LoginViewController.swift"
-            timestampString = "523817279.869262"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "authUI(_:didSignInWith:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/ViewControllers/LoginViewController.swift"
-            timestampString = "523817279.869262"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "authUI(_:didSignInWith:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Anchor/ViewControllers/FriendsViewController.swift"
             timestampString = "523990842.827254"
             startingColumnNumber = "9223372036854775807"
@@ -314,7 +250,7 @@
                   moduleName = "Anchor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/ViewControllers/CreateUsernameViewController.swift"
-                  timestampString = "524167509.65031"
+                  timestampString = "524170169.734205"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "38"
@@ -329,7 +265,7 @@
                   moduleName = "Anchor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/ViewControllers/CreateUsernameViewController.swift"
-                  timestampString = "524167509.651848"
+                  timestampString = "524170169.735549"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
@@ -374,182 +310,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472256.80774"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "show(forUID:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.show (forUID : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.661506"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "364">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(show (forUID : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.663044"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472258.53161"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "show(forUID:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472272.646388"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "create(_:username:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.669865"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "552">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.671289"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472274.515089"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "create(_:username:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.675188"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "232">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.676684"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472275.52632"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "create(_:username:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -577,54 +337,6 @@
             endingLineNumber = "41"
             landmarkName = "nextButtonTapped(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Anchor/Services/UserService.swift"
-            timestampString = "523472683.138523"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "create(_:username:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.685821"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static Anchor.UserService.(create (__ObjC.User, username : Swift.String, completion : (Swift.Optional&lt;Anchor.User&gt;) -&gt; ()) -&gt; ()).(closure #1).(implicit closure #1)"
-                  moduleName = "Anchor"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/Services/UserService.swift"
-                  timestampString = "524167509.687313"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -666,7 +378,7 @@
                   moduleName = "Anchor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/ViewControllers/ChatViewController.swift"
-                  timestampString = "524167509.693684"
+                  timestampString = "524170169.769058"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "150"
@@ -681,7 +393,7 @@
                   moduleName = "Anchor"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/helencao/Desktop/Anchor/Anchor/ViewControllers/ChatViewController.swift"
-                  timestampString = "524167509.695059"
+                  timestampString = "524170169.770297"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "150"

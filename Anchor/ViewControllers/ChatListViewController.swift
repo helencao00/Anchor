@@ -35,7 +35,7 @@ class ChatListViewController: UIViewController {
             self?.userChatsRef = ref
             self?.chats = chats
             self?.chats.sort(by: {$0.lastMessageSent!.compare($1.lastMessageSent! as Date) == ComparisonResult.orderedDescending})
-            print(chats)
+//            print(chats)
             if chats.count == 0{
                 self?.tableView.isHidden = true
                 self?.introLabel.text = "Tap find friends in the lower left corner to chat"
@@ -156,7 +156,7 @@ extension ChatListViewController: UITableViewDataSource{
 //        print(outString)
 //        print(myStringafd)
         let dateString = formatter.string(from: chat.lastMessageSent!)
-        print(dateString)
+//        print(dateString)
         cell.dateLabel.text = dateString
 //        cell.timeLabel.text = outString
         return cell

@@ -57,7 +57,10 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate{
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error{
-            print("Error signing in: \(error.localizedDescription)")
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+
             return
         }
         UserService.show(forUID: (user?.uid)!) { (user) in

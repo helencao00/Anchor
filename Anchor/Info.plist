@@ -38,7 +38,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>4</string>
 	<key>FacebookAppID</key>
 	<string>345909029164491</string>
 	<key>FacebookDisplayName</key>
@@ -53,9 +53,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Let me in</string>
+	<string>Access to camera is needed to perform function</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Let me save</string>
+	<string>Access to photo library is needed to perform function</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

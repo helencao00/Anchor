@@ -148,8 +148,8 @@ struct ChatService{
         for uid in chat.memberUIDs{
             let lastMesage = "\(message.sender.username): \(message.content)"
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessage"] = lastMesage
-            print(message.timestamp.timeIntervalSince1970)
-            print(chatKey)
+//            print(message.timestamp.timeIntervalSince1970)
+//            print(chatKey)
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
         }
         let messagesRef = Database.database().reference().child("messages").child(chatKey).childByAutoId()

@@ -32,7 +32,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func chatButtonTapped(_ sender: UIButton) {
-        configureInitialRootViewController(for: self.view.window)
+        chatButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+                self?.chatButton.transform = .identity
+            }, completion: { _ in
+                self.configureInitialRootViewController(for: self.view.window)
+        })
+//        configureInitialRootViewController(for: self.view.window)
     }
     
     func changeShape(button: UIButton) {

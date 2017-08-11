@@ -32,7 +32,7 @@ class FindFriendsCell: UITableViewCell {
 //        // Configure the view for the selected state
 //    }
     @IBAction func addFriendButtonTapped(_ sender: UIButton) {
-        print("tapped")
+
         //delegate?.didTapFollowButton(sender, on: self)
         
         tapAction?(self)
