@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.title = "Anchor"
+        self.navigationItem.title = "AnchorQR"
         changeShape(button: chatButton)
         changeShape(button: scanButton)
         changeShape(button: convertButton)
