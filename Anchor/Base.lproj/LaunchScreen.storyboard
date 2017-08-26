@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnchorQR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQx-bU-Xd7">
-                                <rect key="frame" x="0.0" y="303" width="375" height="46"/>
+                                <rect key="frame" x="0.0" y="303" width="375" height="61"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="45"/>
                                 <color key="textColor" red="1" green="0.8862745098" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,8 +30,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.43137254899999999" green="0.55294117649999996" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZQx-bU-Xd7" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GiG-W7-QdR"/>
                             <constraint firstItem="ZQx-bU-Xd7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="283" id="HhA-A4-CNc"/>
                             <constraint firstAttribute="trailing" secondItem="ZQx-bU-Xd7" secondAttribute="trailing" id="LKc-cm-gIB"/>
+                            <constraint firstItem="ZQx-bU-Xd7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M5g-Bf-FYF"/>
                             <constraint firstItem="ZQx-bU-Xd7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="k7C-Z3-3aQ"/>
                         </constraints>
                     </view>

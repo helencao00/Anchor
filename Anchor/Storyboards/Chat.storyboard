@@ -147,7 +147,7 @@
                         <barButtonItem key="leftBarButtonItem" image="Home-Small" id="0fy-b1-oQ6">
                             <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="toMainView:" destination="u62-1t-deD" id="dcC-ol-hhI"/>
+                                <segue destination="hBw-QU-nvb" kind="unwind" unwindAction="unwindToMainView:" id="Dvz-u8-GSV"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="Chat-Small" id="lX6-l1-dAK">
@@ -160,9 +160,11 @@
                     <connections>
                         <outlet property="introLabel" destination="HBY-av-GWJ" id="kfl-xv-far"/>
                         <outlet property="tableView" destination="He8-vf-BSs" id="R2v-4b-av7"/>
+                        <segue destination="hBw-QU-nvb" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMain:" id="r2S-eZ-N4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4v-Gv-u9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hBw-QU-nvb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2303.1999999999998" y="784.85757121439292"/>
         </scene>
@@ -486,7 +488,7 @@
                         <barButtonItem key="leftBarButtonItem" image="Back-Small" id="UTN-qa-FcR">
                             <color key="tintColor" red="1" green="0.8980392157" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="toMainChat:" destination="1rI-P2-eyq" id="IKb-Xr-lNi"/>
+                                <segue destination="JuA-NN-3jn" kind="unwind" unwindAction="unwindToChatList:" id="1KG-7R-gf3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -511,6 +513,6 @@
         <image name="User-Small" width="29" height="29"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M7C-VQ-nrC"/>
+        <segue reference="9Ry-dD-lQF"/>
     </inferredMetricsTieBreakers>
 </document>

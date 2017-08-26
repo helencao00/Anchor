@@ -115,7 +115,7 @@ struct ChatService{
         var multipleUpdateValue = [String: Any]()
         
         for uid in chat.memberUIDs{
-            let lastMesage = "\(message.sender): \(String(describing: message.photoContent))"
+            let lastMesage = "\(message.sender.username): Image"
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessage"] = lastMesage
             multipleUpdateValue["chats/\(uid)\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
         }
@@ -148,8 +148,8 @@ struct ChatService{
         for uid in chat.memberUIDs{
             let lastMesage = "\(message.sender.username): \(message.content)"
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessage"] = lastMesage
-//            print(message.timestamp.timeIntervalSince1970)
-//            print(chatKey)
+            //            print(message.timestamp.timeIntervalSince1970)
+            //            print(chatKey)
             multipleUpdateValue["chats/\(uid)/\(chatKey)/lastMessageSent"] = message.timestamp.timeIntervalSince1970
         }
         let messagesRef = Database.database().reference().child("messages").child(chatKey).childByAutoId()
@@ -172,11 +172,19 @@ struct ChatService{
         let messagesRef = Database.database().reference().child("messages").child(chatKey)
         
         return messagesRef.observe(.childAdded, with: { snapshot in
-            guard let message = Message(snapshot: snapshot) else {
-                return completion(messagesRef, nil)
+            guard let messageImage = PhotoMessage(snapshot: snapshot) else {
+            
+                guard let message = Message(snapshot: snapshot) else {
+                    print(snapshot.value!)
+                    return completion(messagesRef, nil)
+                    
+                }
+                return completion(messagesRef, message)
             }
             
-            completion(messagesRef, message)
+            
+            
+            completion(messagesRef, messageImage)
         })
     }
     

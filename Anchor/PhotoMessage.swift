@@ -24,6 +24,7 @@ class PhotoMessage: Message {
         
         return ["sender" : userDict,
                 "contentURL" : "\(downloadURl!)",
+                "content" : "image",
                 "timestamp" : timestamp.timeIntervalSince1970,
                 "isPhoto": true]
     }
@@ -38,7 +39,7 @@ class PhotoMessage: Message {
     
     override init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let content = dict["downloadURL"] as? String
+            let content = dict["contentURL"] as? String
             else { return nil }
 
         self.downloadURl = URL(string: content)!

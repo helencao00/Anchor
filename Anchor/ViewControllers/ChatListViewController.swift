@@ -47,6 +47,7 @@ class ChatListViewController: UIViewController {
         
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
+                self?.animateTable()
             }
            
         }
@@ -65,15 +66,19 @@ class ChatListViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    @IBAction func toMainView(_ sender: UIBarButtonItem) {
-        
-        self.navigationController!.popToRootViewController(animated: true)
+    @IBAction func unwindToChatList(_ segue: UIStoryboardSegue){
         
     }
     
-    @IBAction func unwindToChatList(_ segue: UIStoryboardSegue) {
-//    print("Abid gets 60% of my app")
-    }
+//    @IBAction func toMainView(_ sender: UIBarButtonItem) {
+//        
+////        self.navigationController!.popToRootViewController(animated: true)
+//        self.performSegue(withIdentifier: "unwindToMain", sender: self)
+//    }
+   
+//    @IBAction func unwindToChatList(_ segue: UIStoryboardSegue) {
+////    print("Abid gets 60% of my app")
+//    }
 
     func animateTable() {
         tableView.reloadData()
@@ -90,13 +95,14 @@ class ChatListViewController: UIViewController {
         
         for a in cells {
             let cell: UITableViewCell = a as UITableViewCell
-            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .allowAnimatedContent, animations: {
+            UIView.animate(withDuration: 1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: [], animations: {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0);
             }, completion: nil)
             
             index += 1
         }
     }
+   
     
     /*
     // MARK: - Navigation

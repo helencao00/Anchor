@@ -16,6 +16,8 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
     var scanner: MTBBarcodeScanner?
     
     static var urll: URL?
+    static var stringValue: String?
+    static var stringg: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,10 @@ class ScannerCamera: UIViewController, SFSafariViewControllerDelegate {
                                     safariVC.delegate = self as SFSafariViewControllerDelegate
                                     self.present(safariVC, animated: true, completion: nil)
                                 }
+                                }
+                                else{
+                                    ScannerCamera.stringg = stringValue
+                                    self.performSegue(withIdentifier: "toText", sender: self)
                                 }
 
                             }

@@ -61,6 +61,9 @@ class ChatViewController: JSQMessagesViewController {
         messagesRef?.removeObserver(withHandle: messagesHandle)
     }
     
+//    @IBAction func unwindToChatList(){
+//        performSegue(withIdentifier: "toChatList", sender: self)
+//    }
     
     func setupJSQMessagesViewController() {
         senderId = User.current.uid
@@ -80,6 +83,8 @@ class ChatViewController: JSQMessagesViewController {
             if let message = message {
                 self?.messages.append(message)
                 self?.finishReceivingMessage()
+            } else {
+                print("errr")
             }
         })
     }
@@ -99,6 +104,10 @@ extension ChatViewController {
     
     // 3
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
+        var message = messages[indexPath.item]
+        if message.isPhoto {
+            message = message as! PhotoMessage
+        }
         return messages[indexPath.item].jsqMessageValue
     }
     
@@ -167,10 +176,10 @@ extension ChatViewController {
         let message = Message(content: text)
      
         sendMessage(message)
+            finishSendingMessage()
             
-        finishSendingMessage()
- 
-        JSQSystemSoundPlayer.jsq_playMessageSentAlert()
+            JSQSystemSoundPlayer.jsq_playMessageSentAlert()
+   
         }else{
             let image = Barcode.fromString(string: text)
             let convert = Barcode.convertToUIImage(cmage: image!)
@@ -208,6 +217,10 @@ extension ChatViewController {
                     //        self.jsqMessages.append(sendMessage!)
                     //        let message = mediaItem
                     self.sendImageMessage(realImage)
+                    self.finishSendingMessage()
+                    
+                    JSQSystemSoundPlayer.jsq_playMessageSentAlert()
+                    self.tryObservingMessages()
                 }
             }
 

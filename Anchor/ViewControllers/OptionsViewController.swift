@@ -31,8 +31,25 @@ class OptionsViewController: UIViewController {
         button.clipsToBounds = true
         
     }
+    @IBAction func generateButtonTapped(_ sender: UIButton) {
+        generateButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.generateButton.transform = .identity
+            },completion: { _ in
+                self.performSegue(withIdentifier: "toGenerator", sender: self)
+        })
+    }
 
 
+    @IBAction func translateButtonTapped(_ sender: UIButton) {
+        translateButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.translateButton.transform = .identity
+            },completion: { _ in
+                self.performSegue(withIdentifier: "toText", sender: self)
+        })
+
+    }
     /*
     // MARK: - Navigation
 

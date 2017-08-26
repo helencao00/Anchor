@@ -51,6 +51,7 @@
 		0DD021331F2A5D5800920F19 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD021321F2A5D5800920F19 /* FindFriendsViewController.swift */; };
 		0DD021351F2A6C8700920F19 /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD021341F2A6C8700920F19 /* FindFriendsCell.swift */; };
 		0DD308DA1F34B62100BE4474 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD308D91F34B62100BE4474 /* ProfileHeaderCell.swift */; };
+		0DD47DEE1F50FA4C00943104 /* ScanTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD47DED1F50FA4C00943104 /* ScanTextViewController.swift */; };
 		1172C777246CC71A18EFE5E9 /* Pods_AnchorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59B9A0428265CD3C3FE571 /* Pods_AnchorTests.framework */; };
 		1A7F9C91C882BE1E2E152CEB /* Pods_Anchor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8989ABD392BD56A9F5C4FEB1 /* Pods_Anchor.framework */; };
 		5D5E950373C627DC356F4DC3 /* Pods_AnchorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FFA53D190D4E49FD0900635 /* Pods_AnchorUITests.framework */; };
@@ -125,6 +126,7 @@
 		0DD021321F2A5D5800920F19 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsViewController.swift; path = ViewControllers/FindFriendsViewController.swift; sourceTree = "<group>"; };
 		0DD021341F2A6C8700920F19 /* FindFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFriendsCell.swift; path = Views/FindFriendsCell.swift; sourceTree = "<group>"; };
 		0DD308D91F34B62100BE4474 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileHeaderCell.swift; path = Views/ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		0DD47DED1F50FA4C00943104 /* ScanTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanTextViewController.swift; path = ViewControllers/ScanTextViewController.swift; sourceTree = "<group>"; };
 		20C7D3EB921B519DA278821B /* Pods-AnchorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnchorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnchorUITests/Pods-AnchorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3154B53D8B399964B775642B /* Pods-Anchor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Anchor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Anchor/Pods-Anchor.release.xcconfig"; sourceTree = "<group>"; };
 		5FFA53D190D4E49FD0900635 /* Pods_AnchorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnchorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +263,7 @@
 				0D81139C1F215124008E01A9 /* ViewController.swift */,
 				0D7FE5661F3CC7F90021E1BE /* OptionsViewController.swift */,
 				0D8113CB1F215CDC008E01A9 /* ScannerCamera.swift */,
+				0DD47DED1F50FA4C00943104 /* ScanTextViewController.swift */,
 				0D8113CF1F22748E008E01A9 /* SafariViewController.swift */,
 				0D38989E1F2662F200F0CDBB /* GenerateQRCodeViewController.swift */,
 				0D3898A61F26941900F0CDBB /* QRToTextViewController.swift */,
@@ -657,6 +660,7 @@
 				0D38E7A71F30FCE1005002D0 /* FriendCell.swift in Sources */,
 				0D8113D01F22748E008E01A9 /* SafariViewController.swift in Sources */,
 				0DD021231F2936F100920F19 /* Chat.swift in Sources */,
+				0DD47DEE1F50FA4C00943104 /* ScanTextViewController.swift in Sources */,
 				0D3898BF1F27FCC300F0CDBB /* UserService.swift in Sources */,
 				0DD0212F1F2A52C300920F19 /* ChatViewController.swift in Sources */,
 				0D38989F1F2662F200F0CDBB /* GenerateQRCodeViewController.swift in Sources */,
@@ -825,6 +829,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -841,6 +846,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

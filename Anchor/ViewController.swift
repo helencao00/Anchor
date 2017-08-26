@@ -23,17 +23,42 @@ class ViewController: UIViewController {
         changeShape(button: convertButton)
         
     }
-    @IBAction func unwindToMain(_ segue: UIStoryboardSegue) {
-    
-    }
+//    @IBAction func unwindToMain(_ segue: UIStoryboardSegue) {
+//    
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func scanButtonTapped(_ sender: UIButton) {
+        scanButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.scanButton.transform = .identity
+            },completion: { _ in
+                self.performSegue(withIdentifier: "toScanner", sender: self)
+        })
+        
+
+    }
+    @IBAction func convertButtonTapped(_ sender: UIButton) {
+        convertButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.convertButton.transform = .identity
+            },completion: { _ in
+                self.performSegue(withIdentifier: "toConverter", sender: self)
+        })
+        
+    }
+    
+    
+    @IBAction func unwindToMainView(_ segue: UIStoryboardSegue){
+        
+    }
+    
     @IBAction func chatButtonTapped(_ sender: UIButton) {
         chatButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
                 self?.chatButton.transform = .identity
             }, completion: { _ in
                 self.configureInitialRootViewController(for: self.view.window)

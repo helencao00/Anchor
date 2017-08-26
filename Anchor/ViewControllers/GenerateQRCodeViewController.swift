@@ -46,6 +46,11 @@ class GenerateQRCodeViewController: UIViewController {
     }
 
     @IBAction func generateButtonTapped(_ sender: UIButton) {
+        generateButton.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .allowUserInteraction, animations: { [weak self] in
+            self?.generateButton.transform = .identity
+            })
+
         if let text = userInputTextField.text{
             let realString = text.trimmingCharacters(in: CharacterSet.whitespaces)
             if realString.containsEmoji || realString.asciiArray.isEmpty {
